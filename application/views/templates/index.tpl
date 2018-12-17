@@ -123,7 +123,10 @@
 
 <script type="text/javascript">
   function updateTotal(id,price){
+
     var input=document.getElementById("input"+id);
+    if(input.value<0)
+      input.value=0;
     var total=document.getElementById("total"+id);
     alert(input.value+" "+price);
     total.textContent=input.value*price;
