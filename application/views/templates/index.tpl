@@ -86,7 +86,7 @@
           </article>
         </div>
         <br>
-      
+        {/foreach}
     </div>
 
 
