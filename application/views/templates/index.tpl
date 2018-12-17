@@ -125,6 +125,7 @@
   function updateTotal(id,price){
     var input=document.getElementById("input"+id);
     var total=document.getElementById("total"+id);
+    alert("input.textContent"+" price");
     total.textContent=input.textContent*price;
   }
 </script>
