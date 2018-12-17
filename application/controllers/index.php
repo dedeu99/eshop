@@ -1,4 +1,4 @@
-<?php
+<?php/
 	defined('BASEPATH') OR exit('No direct script access allowed'); 
 	error_reporting(E_ALL);
 			ini_set('display_errors', 1);
@@ -27,7 +27,8 @@
 		public function index(){
 			$data['base_url'] = base_url();
 			$data['products'] = $this->products->getProducts();
-			$this->smarty->view('application/views/templates/index.tpl', $data);
+			//$this->smarty->view('application/views/templates/index.tpl', $data);
+			$this->load->view('welcome_message');
 		}
 	}
 ?>
