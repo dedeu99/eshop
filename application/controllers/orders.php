@@ -3,7 +3,7 @@
 	error_reporting(E_ALL);
 			ini_set('display_errors', 1);
 
-	class Blog extends CI_Controller {
+	class Orders extends CI_Controller {
 		public function __construct()
 		{
 			parent::__construct();
