@@ -78,7 +78,7 @@
                   <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
                 </div>
               </div>
-              <p> <b>Total:</b> <span id="total{$product.id}"></span> €</p>
+              <p> <b>Total:</b> <span id="total{$product.id}">0</span> €</p>
           
               <a href="#" class="btn btn-primary">🛒Add to cart</a>
             </div>
