@@ -75,10 +75,10 @@
               <div class="form-group row text-right ">
                 <label for="example-number-input" class="col-6 col-form-label">Quantity:</label>
                 <div class="col-6">
-                  <input class="form-control" type="number" value="0" min="0" max="10" id="example-number-input">
+                  <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
                 </div>
               </div>
-              <p> <b>Total:</b> 35,00€</p>
+              <p> <b>Total:</b> <span id="total{$product.id}"></span> €</p>
           
               <a href="#" class="btn btn-primary">🛒Add to cart</a>
             </div>
@@ -121,5 +121,11 @@
 </body>
 
 
-
+<script type="text/javascript">
+  function updateTotal(id,price){
+    var input=document.getElementById("input"+id);
+    var total=document.getElementById("total"+id);
+    total.textContent=input.textContent*price;
+  }
+</script>
 </html>
