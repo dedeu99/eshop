@@ -65,7 +65,7 @@
             
             <div class="card-header"><h4>{$product.name}</h4></div>
             <div class="card-body">
-              <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{{$product.image}" alt="Card image">
+              <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">
               <p class="card-text">{$product.description}</p>
               <hr>
               <p><b>Price per unit:</b> {$product.price}€</p>
