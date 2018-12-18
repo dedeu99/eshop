@@ -55,7 +55,13 @@
         <h2>I'm a sidebar</h2>      
       </nav>
       <main class="col-md-9">
-        <i data-toggle="collapse" data-target="#sidebar"  onclick="toggle(this)">X</i>
+        <i data-toggle="collapse" data-target="#sidebar"  onclick="var that = object;
+    setTimeout(function() {
+        console.log(that.parentNode);
+        //that.parentNode.style.flex = 'auto';
+        that.parentNode.style['max-width'] = 'none';
+      }
+    , 2000);">X</i>
         <div class="row ">
           <div class="card-group col-xs-12 col-md-4 col-l-2 mb-1 mb-1">
             {foreach $products as $product}
@@ -130,13 +136,7 @@
 
 
   function toggle(object){
-    var that = object;
-    setTimeout(function() {
-        console.log(that.parentNode);
-        that.parentNode.style.flex = 'auto';
-        that.parentNode.style['max-width'] = 'none';
-      }
-    , 2000);
+    
   }
 </script>
 </html>
