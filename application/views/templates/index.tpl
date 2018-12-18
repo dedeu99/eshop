@@ -130,7 +130,13 @@
 
 
   function toggle(object){
-    var that = object; setTimeout(function() {console.log(that.parentNode);that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);
+    var that = object;
+    setTimeout(function() {
+        console.log(that.parentNode);
+        that.parentNode.style.flex = 'auto';
+        that.parentNode.style['max-width'] = 'none';
+      }
+    , 2000);
   }
 </script>
 </html>
