@@ -63,7 +63,7 @@
       }
     , 2000);">&times;</i>
         <div class="row ">
-          <div class="card-group col-xs-12 col-md-4 col-lg-2 mb-1 ml-1">
+          <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1 ml-1">
             {foreach $products as $product}
             <article class="card text-white bg-dark border-light text-center">
               
