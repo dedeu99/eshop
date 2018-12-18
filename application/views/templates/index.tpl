@@ -16,11 +16,6 @@
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
 
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/blog/post">Post a new message</a>
-      </li>
-    </ul>
 
 
     <div class="dropdown" >
@@ -39,70 +34,72 @@
         {$username}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">🛒Shopping Cart</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="{$base_url}index.php/blog/logout">Log Out</a>
+        <a class="dropdown-item" href="{$base_url}logout">Log Out</a>
       </div>
     </div> 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/blog/login">Login</a>
+        <a class="nav-link" href="{$base_url}login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/blog/register">Register</a>
+        <a class="nav-link" href="{$base_url}register">Register</a>
       </li>
     </ul>
   </nav>
 
-  <div class="container">
-    
-
-      <div class="row ">
-
-        <div class="card-group col-xs-12 col-md-4 mb-1 mb-1">
-          {foreach $products as $product}
-          <article class="card text-white bg-dark border-light text-center">
+  <div class="container-fluid">
+    <div class="row d-flex">
+      <nav class="col-md-3 collapse show width" id="sidebar">
+        <h2>I'm a sidebar</h2>      
+      </nav>
+      <main class="col-md-9">
+        <i class="fa fa-times" data-toggle="collapse" data-target="#sidebar" aria-hidden="true" aria-expanded="false" aria-controls="sidebar" onclick="var that = this; setTimeout(function() {console.log(that.parentNode);that.parentNode.style.flex = 'auto';that.parentNode.style['max-width'] = 'none';}, 2000);"></i>
+        <div class="row ">
+          <div class="card-group col-xs-12 col-md-4 col-l-2 mb-1 mb-1">
+            {foreach $products as $product}
+            <article class="card text-white bg-dark border-light text-center">
+              
+              <div class="card-header"><h4>{$product.name}</h4></div>
+              <div class="card-body">
+                <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">
+                <p class="card-text">{$product.description}</p>
+                <hr>
+                <p><b>Price per unit:</b> {$product.price}€</p>
+              </div> 
+              <div class="card-footer align-contents-center text-center">
             
-            <div class="card-header"><h4>{$product.name}</h4></div>
-            <div class="card-body">
-              <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">
-              <p class="card-text">{$product.description}</p>
-              <hr>
-              <p><b>Price per unit:</b> {$product.price}€</p>
-            </div> 
-            <div class="card-footer align-contents-center text-center">
-          
-              <div class="form-group row text-right ">
-                <label for="example-number-input" class="col-6 col-form-label">Quantity:</label>
-                <div class="col-6">
-                  <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
+                <div class="form-group row text-right ">
+                  <label for="example-number-input" class="col-6 col-form-label">Quantity:</label>
+                  <div class="col-6">
+                    <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
+                  </div>
                 </div>
+                <p> <b>Total:</b> <span id="total{$product.id}">0</span> €</p>
+            
+                <a href="#" class="btn btn-primary">🛒Add to cart</a>
               </div>
-              <p> <b>Total:</b> <span id="total{$product.id}">0</span> €</p>
-          
-              <a href="#" class="btn btn-primary">🛒Add to cart</a>
-            </div>
 
-          </article>
+            </article>
+          </div>
+          <br>
+          {/foreach}
         </div>
-        <br>
-        {/foreach}
+      </main>
     </div>
-
-
-
     
-      <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
     
   </div>
   <br>
@@ -128,7 +125,6 @@
     if(input.value<0)
       input.value=0;
     var total=document.getElementById("total"+id);
-    alert(input.value+" "+price);
     total.textContent=input.value*price;
   }
 </script>
