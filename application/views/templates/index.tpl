@@ -61,7 +61,7 @@
         //that.parentNode.style.flex = 'auto';
         that.parentNode.style['max-width'] = 'none';
       }
-    , 2000);">X</i>
+    , 2000);">&times;</i>
         <div class="row ">
           <div class="card-group col-xs-12 col-md-4 col-l-2 mb-1 mb-1">
             {foreach $products as $product}
