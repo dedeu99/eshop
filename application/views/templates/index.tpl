@@ -17,7 +17,7 @@
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
 
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/blog/post">Post a new message</a>
       </li>
