@@ -147,7 +147,32 @@
   }
   function makeProduct(data){
 
-    return "<p>"+data.description+"</p>";
+    return '<div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">'+
+            '<article class="card text-white bg-dark border-light text-center">'+
+              
+              '<div class="card-header"><h4>'+data.name+'</h4></div>'+
+              '<div class="card-body">'+
+                '<img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">'+
+                '<p class="card-text">'+data.description+'</p>'+
+                '<hr>'+
+                '<p><b>Price per unit:</b>'+data.price+'€</p>'+
+              '</div> '+
+              '<div class="card-footer align-contents-center text-center">'+
+            
+                '<div class="form-group row text-right ">'+
+                  '<label for="example-number-input" class="col-6 col-form-label">Quantity:</label>'+
+                  '<div class="col-6">'+
+                    '<input class="form-control" id="input'+data.id+'" oninput="updateTotal('+data.id+','+data.price+')" type="number" value="0" min="0" id="example-number-input">'+
+                  '</div>'+
+                '</div>'+
+                '<p> <b>Total:</b> <span id="total'+data.id+'>0</span> €</p>'+
+            
+                '<a href="#" class="btn btn-primary">🛒Add to cart</a>'+
+              '</div>'+
+
+            '</article>'+
+          '</div>'+
+          '<br>';
   }
 </script>
 </html>
