@@ -1,5 +1,5 @@
 <?php
-class Costumer extends CI_Model {
+class Customer extends CI_Model {
 	public function __construct()
 	{
 		$this->load->database();
@@ -9,7 +9,7 @@ class Costumer extends CI_Model {
 		$name=htmlentities($name);
 		$email=htmlentities($email);
 		$password=htmlentities($password);
-		$query_RAW = "INSERT INTO costumers (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password',NULL,0)";
+		$query_RAW = "INSERT INTO customers (name,email,created_at,updated_at,password_digest,remember_digest,admin) VALUES ('$name','$email',NOW(),NOW(),'$password',NULL,0)";
 		return $this->db->query($query_RAW);
 	}
 }

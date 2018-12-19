@@ -11,7 +11,7 @@
 			
 
 			$this->load->model('product');
-			$this->load->model('costumer');
+			$this->load->model('customer');
 
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
@@ -57,7 +57,7 @@
             }
             else
             {
-            	if($this->costumer->register_user( $_POST['name'], $_POST['email'], hash('sha512',$_POST['password']))==1){
+            	if($this->customer->register_user( $_POST['name'], $_POST['email'], hash('sha512',$_POST['password']))==1){
                		$data['background']="success";
                		$name = $_POST['name'];
                		$data['message']="User $name created sucessfully";
