@@ -157,7 +157,7 @@
 				}
 				++$i;
 			}
-
+			$data['total']=$total;
 			//var_dump($_SESSION['cart']);
 			//var_dump($data['cart']);
 

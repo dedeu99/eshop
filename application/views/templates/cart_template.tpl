@@ -68,6 +68,7 @@
           <tr>
             <th scope="row"> </th>
             <td> </td>
+            <td> </td>
             <td><b>TOTAL</b></td>
             <td>{$total}</td>
           </tr>
