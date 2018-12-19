@@ -17,24 +17,26 @@
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
 
-
-    {if $loggedin} 
-    <div class="dropdown" >
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-        {$username}
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="#">🛒Shopping Cart</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
-      </div>
-    </div> 
-    {else}
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
       </li>
 
+    {if $loggedin} 
+    </ul>
+
+    <div class="dropdown" >
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+        {$username}
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
+        <div class="dropdown-divider"></div>cart
+        <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
+      </div>
+    </div> 
+    {else}
+    
 
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
