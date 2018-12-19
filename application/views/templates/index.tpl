@@ -138,7 +138,7 @@
           
           var response= JSON.parse(data);
           
-          for(i in response)  
+          for(var i in response)  
           alert(response[i]);  
             $( '#products' ).append( makeProduct(response[i]) );
           });
