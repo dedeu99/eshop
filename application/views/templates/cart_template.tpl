@@ -50,7 +50,7 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          Your cart 
+          <button type="button" class="btn btn-primary ml-auto mr-0">Checkout</button> 
         </caption>
         <thead class="thead-dark">
           <tr>
@@ -82,7 +82,7 @@
       </table>
       
       
-      <button type="button" class="btn btn-primary ml-auto">Checkout</button>
+
     </div>
       
     <br>
