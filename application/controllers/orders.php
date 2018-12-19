@@ -1,21 +1,13 @@
 <?php
-	defined('BASEPATH') OR exit('No direct script access allowed'); 
-	error_reporting(E_ALL);
-			ini_set('display_errors', 1);
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class Orders extends CI_Controller {
-		public function __construct()
+class Orders extends CI_Controller {
+
+		public function index()
 		{
-			parent::__construct();
-			$this->load->model('order');
-			$this->load->library('session');
+			$this->load->view('welcome_message');
 		}
-		public function index(){
-			echo "its here";
-		}
-		/*public function is_loggedin(){
-			return isset($this->session->userId)&&isset($this->session->user);
-		}*/
+		
 		public function order($productid=0,$quantity=0)
 		{
 			if(!isset($_SESSION['cart']))
