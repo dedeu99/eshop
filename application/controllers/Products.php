@@ -9,7 +9,7 @@
 			parent::__construct();
 			$this->load->model('products');
 		}
-		public function index($cat_id){
+		public function getProductsByCategory($cat_id){
 			return json_encode($this->products->getProductsByCategory());
 		}
 	}
