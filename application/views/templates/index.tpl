@@ -8,7 +8,7 @@
   <!--<link rel="stylesheet" href="LAB3.css" type ="text/css">-->
 </head>
 
-<body style="overflow-y: hidden">
+<body>
 
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
@@ -50,8 +50,8 @@
     </ul>
   </nav>
 
-  <div class="d-flex">
-    <div class="flex-row">
+  <div class="container-fluid">
+    <div class="row d-flex">
       
 
       <div class="col-md-3 collapse" id="navbarToggleExternalContent">
@@ -61,9 +61,9 @@
         </div>
       </div>
       
-      <main class="col-md-9 flex-column">
+      <main class="col-md-9">
         
-        <div class="flex-row ">
+        <div class="row ">
           <div class="col-xs-12">
             <nav class="navbar navbar-dark bg-dark">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
@@ -72,7 +72,7 @@
             </nav>
           </div>
         </div>
-        <div class="row " style="overflow-y: scroll">
+        <div class="row">
           {foreach $products as $product}
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
             
