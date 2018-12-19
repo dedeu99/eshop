@@ -8,7 +8,7 @@
   <!--<link rel="stylesheet" href="LAB3.css" type ="text/css">-->
 </head>
 
-<body>
+<body style="overflow-y: hidden">
 
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
@@ -72,7 +72,7 @@
             </nav>
           </div>
         </div>
-        <div class="row ">
+        <div class="row " style="overflow-y: scroll">
           {foreach $products as $product}
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
             
