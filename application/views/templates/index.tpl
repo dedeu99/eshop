@@ -152,7 +152,7 @@
               
               '<div class="card-header"><h4>'+data.name+'</h4></div>'+
               '<div class="card-body">'+
-                '<img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">'+
+                '<img class="card-img-top w-50" style="width: 100%;"src="{$base_url}'+data.image+'" alt="Card image">'+
                 '<p class="card-text">'+data.description+'</p>'+
                 '<hr>'+
                 '<p><b>Price per unit:</b>'+data.price+'€</p>'+
@@ -165,7 +165,7 @@
                     '<input class="form-control" id="input'+data.id+'" oninput="updateTotal('+data.id+','+data.price+')" type="number" value="0" min="0" id="example-number-input">'+
                   '</div>'+
                 '</div>'+
-                '<p> <b>Total:</b> <span id="total'+data.id+'>0</span> €</p>'+
+                '<p> <b>Total:</b> <span id="total'+data.id+'">0</span> €</p>'+
             
                 '<a href="#" class="btn btn-primary">🛒Add to cart</a>'+
               '</div>'+
