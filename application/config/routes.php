@@ -59,6 +59,6 @@ $route['default_controller'] = 'index';
 
 
 //'index.php/products';
-$route['product/:num'] = /*base_url()+*/'index.php/products/getProductsByCategory/$1';
+$route['product/:num'] = base_url()+'index.php/products/getProductsByCategory/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
