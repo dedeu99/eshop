@@ -25,13 +25,10 @@ class Product extends CI_Model {
 	public function getProductsInfo($products)
 	{
 
-		$arr=[];
-		for( $i in $products)
-			$arr[]=%i
 		$query= "SELECT * FROM products WHERE id IN (";
-		$query+=implode(",", $arr);
+		$query+=implode(",",  array_keys($products));
 		$query+=")";
-		var_dump(implode(",", $products));
+		var_dump($query);
 		return $query;//$this->db->query($query)->result_array();
 	}
 }
