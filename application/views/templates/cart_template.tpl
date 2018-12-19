@@ -49,9 +49,9 @@
 
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
-        <caption class="row">
-          <p>Your cart</p> 
-          <button type="button" class="btn btn-primary ml-auto">Checkout</button>
+        <caption >
+          <p class="col-xs-1">Your cart</p> 
+          <button type="button" class=" col-xs-1 btn btn-primary ml-auto">Checkout</button>
         </caption>
         <thead class="thead-dark">
           <tr>
