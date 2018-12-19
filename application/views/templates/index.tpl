@@ -131,7 +131,8 @@
     /*var products=document.getElementById("products");
     var categories=document.getElementById("categories");*/
     var numCategories= $("#products > div").length;
-    $( '#products' ).innerHTML="";
+    $( '#products' ).empty();
+
     $("#categories input").each(function () {
       if(this.checked)
         $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
