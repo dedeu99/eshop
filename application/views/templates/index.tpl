@@ -12,9 +12,7 @@
 
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
     <a class="navbar-brand" href="{$base_url}index.php/blog">
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
@@ -54,10 +52,15 @@
 
   <div class="container-fluid">
     <div class="row d-flex">
-      <div class="col-md-3 collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h4 class="text-white">Collapsed content</h4>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
+      <div class="col-md-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+       <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h4 class="text-white">Collapsed content</h4>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
         </div>
       </div>
       <main class="col-md-9">
