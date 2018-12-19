@@ -9,9 +9,9 @@
 </head>
 
 <body>
+<div class="container">
 
-
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+  <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
 
     <a class="navbar-brand" href="{$base_url}index.php/blog">
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
@@ -121,6 +121,7 @@
       <p>Designed by <a href="https://github.com/dedeu99">A62362</a></p>
     </div>
   </footer>
+</div>
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
