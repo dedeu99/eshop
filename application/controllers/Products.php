@@ -10,7 +10,7 @@
 			$this->load->model('product');
 		}
 		public function getProductsByCategory($cat_id){
-			return json_encode($this->product->getProductsByCategory());
+			return json_encode($this->product->getProductsByCategory($cat_id));
 		}
 	}
 ?>
