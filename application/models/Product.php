@@ -27,7 +27,7 @@ class Product extends CI_Model {
 		$query= "SELECT * FROM products WHERE id IN (";
 		$query+=implode(",", $products);
 		$query+=")";
-		var_dump(implode(",", $products););
+		var_dump(implode(",", $products));
 		return $query;//$this->db->query($query)->result_array();
 	}
 }
