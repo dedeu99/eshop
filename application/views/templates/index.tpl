@@ -65,10 +65,12 @@
         
         <div class="row ">
           <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+        <div class="row ">
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1 ml-1">
             {foreach $products as $product}
             <article class="card text-white bg-dark border-light text-center">
