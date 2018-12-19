@@ -33,7 +33,7 @@ class Orders extends CI_Controller {
 		public function placeOrder(){
 			
 
-			$this->order->createOrder($_SESSION['user_id'],$_SESSION['total'],$_SESSION['cart']);
+			$this->order->createOrder($_SESSION['userId'],$_SESSION['total'],$_SESSION['cart']);
 			unset($_SESSION['cart']);
 			$_SESSION['total']=0;
 			showOrders();
