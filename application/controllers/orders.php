@@ -17,6 +17,9 @@ class Orders extends CI_Controller {
 
 		public function orderProduct($productid=-1,$quantity=-1)
 		{
+			if(intval($quantity)<=0)
+				return;
+			
 			if(!isset($_SESSION['cart']))
 				$_SESSION['cart']=[];
 
