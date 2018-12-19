@@ -148,7 +148,7 @@
 			$data['base_url'] = base_url();
 			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
 			
-			foreach ($data['cart'] as $item) {
+			foreach ($data['cart'] as $item => $value) {
 				$item['quantity']=$_SESSION['cart'][intval($item['id'])];
 				//var_dump(intval($item['id']));     int 1
 				//var_dump($_SESSION['cart']);		arr[1]="10"
