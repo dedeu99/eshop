@@ -9,6 +9,9 @@
 			parent::__construct();
 			$this->load->model('product');
 		}
+		public function index(){
+			echo 'sucess';
+		}
 		public function getProductsByCategory($cat_id){
 			
 			echo json_encode($this->product->getProductsByCategory($cat_id));
