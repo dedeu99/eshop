@@ -50,8 +50,7 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          <p class="col-xs-1">Your cart</p> 
-          <button type="button" class=" col-xs-1 btn btn-primary ml-auto">Checkout</button>
+          Your cart 
         </caption>
         <thead class="thead-dark">
           <tr>
@@ -83,7 +82,7 @@
       </table>
       
       
-
+      <button type="button" class="btn btn-primary ml-auto">Checkout</button>
     </div>
       
     <br>
