@@ -139,7 +139,7 @@
           var response= JSON.parse(data);
           alert(response);
           for(var i in response)  
-          alert(response[i]);  
+          //alert(response[i]);  
             $( '#products' ).append( makeProduct(response[i]) );
           });
     });
@@ -147,7 +147,7 @@
   }
   function makeProduct(data){
 
-    return "<p>"+data['description']+"</p>";
+    return "<p>"+data.description+"</p>";
   }
 </script>
 </html>
