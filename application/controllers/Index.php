@@ -26,8 +26,8 @@
 		}*/
 		public function index(){
 			$data['base_url'] = base_url();
-			$data['products'] = $this->products->getProducts();
-			$data['categories'] = $this->products->getCategories();
+			$data['products'] = $this->product->getProducts();
+			$data['categories'] = $this->product->getCategories();
 			$this->smarty->view('application/views/templates/index.tpl', $data);
 			//$this->load->view('welcome_message');
 		}
