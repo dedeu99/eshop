@@ -12,6 +12,9 @@
 
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <a class="navbar-brand" href="{$base_url}index.php/blog">
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
@@ -51,11 +54,14 @@
 
   <div class="container-fluid">
     <div class="row d-flex">
-      <nav class="col-md-3 collapse" id="sidebar">
-        <h2>I'm a sidebar</h2>      
-      </nav>
+      <div class="col-md-3 collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h4 class="text-white">Collapsed content</h4>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
       <main class="col-md-9">
-        <i data-toggle="collapse" data-target="#sidebar" >&times;</i>
+        
         <div class="row ">
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1 ml-1">
             {foreach $products as $product}
