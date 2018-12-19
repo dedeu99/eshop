@@ -49,7 +49,7 @@
 
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
-        <caption>
+        <caption class="row">
           <p>Your cart</p> 
           <button type="button" class="btn btn-primary ml-auto">Checkout</button>
         </caption>
