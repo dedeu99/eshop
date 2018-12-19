@@ -64,7 +64,7 @@
       <main class="col-md-9">
         
         <div class="row ">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
       <span class="navbar-toggler-icon"></span>
     </button>
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1 ml-1">
