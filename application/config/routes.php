@@ -50,7 +50,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'index';
-$route['product'] = 'index.php/products';
-$route['product/(:num)'] = /*base_url()+*/'index.php/products/getProductsByCategory/$1';
+$route['product'] =  function ()
+{
+	echo "I GOT CALLED";
+        return '';
+};
+
+
+
+
+
+
+
+//'index.php/products';
+$route['product/(:num)'] = '';/*base_url()+'index.php/products/getProductsByCategory/$1';*/
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
