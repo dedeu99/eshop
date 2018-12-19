@@ -56,12 +56,14 @@
       <div class="flex-column">
         <div class="sticky-top flex-row">
           <div class="navbar navbar-dark bg-dark collapse text-white" id="navbarToggleExternalContent">
-            <h4>Categorias</h4>
-            {foreach $categories as $categorie}
-            <div class="checkbox">
-              <label><input type="checkbox" value="{$categorie.id}">{$categorie.name}</label>
-            </div>
-            {/foreach}
+            <fieldset>
+            <legend><h4>Categorias:</h4></legend>
+              {foreach $categories as $categorie}
+              <div class="checkbox" id="cat{$categorie.id}">
+                <label><input type="checkbox" value="{$categorie.id}">{$categorie.name}</label>
+              </div>
+              {/foreach}
+            </fieldset>
           </div>
         </div>
       </div>
