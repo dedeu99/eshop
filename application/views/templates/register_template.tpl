@@ -36,7 +36,7 @@
       <div class="row justify-content-center align-items-center">
         
         <div class="col-sm-4">
-          <form action="{$base_url}index.php/blog/register" method="POST">
+          <form action="{$base_url}index.php/index/register" method="POST">
             <div class="form-group text-center">
               <h1>Register</h1>
             </div>
