@@ -50,11 +50,11 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          <button type="button" href="{$base_url}index.php/orders/placeOrder" class="btn btn-primary" 
+          <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
           {if !$loggedin||($total<1)}
           disabled
           {/if}
-          >Checkout</button> 
+          >Checkout</button></a>
         </caption>
         <thead class="thead-dark">
           <tr>
