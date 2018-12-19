@@ -36,7 +36,7 @@ class Orders extends CI_Controller {
 			$this->order->createOrder($_SESSION['userId'],$_SESSION['total'],$_SESSION['cart']);
 			unset($_SESSION['cart']);
 			$_SESSION['total']=0;
-			showOrders();
+			$this->showOrders();
 		}
 		public function showOrders(){
 			
