@@ -78,7 +78,9 @@
           </tr>
         </tbody>
       </table>
-      <button type="button" class="btn btn-primary">Checkout</button>
+      
+      <button type="button" class="btn btn-primary ml-auto">Checkout</button>
+
     </div>
       
     <br>
