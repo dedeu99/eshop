@@ -19,7 +19,12 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
+        <a class="nav-link" href="{$base_url}index.php/index/cart">
+        0,00€ in x items
+        <br>
+        🛒Shopping Cart
+
+      </a>
       </li>
     </ul>
     {if $loggedin} 
