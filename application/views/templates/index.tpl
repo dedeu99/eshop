@@ -60,7 +60,7 @@
       </div>
       <div class="flex-column">
         <div class="row">
-          <nav class="navbar position-fixed navbar-dark bg-dark">
+          <nav class="navbar navbar-dark bg-dark" style="position: fixed;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
               <span class="navbar-toggler-icon"></span>
             </button>
