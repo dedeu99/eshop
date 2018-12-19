@@ -52,12 +52,10 @@
 
   <div >
     <div class="d-flex flex-row">
-      <div class="sticky-top flex-column">
-        <div class="col-md-3 collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark">
-            <h4 class="text-white">Collapsed content</h4>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
+      <div class="sticky-top flex-column bg-dark">
+        <div class="col-md-3 collapse" id="navbarToggleExternalContent">  
+          <h4 class="text-white">Collapsed content</h4>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
       </div>
       
