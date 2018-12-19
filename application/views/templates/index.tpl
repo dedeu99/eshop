@@ -135,7 +135,8 @@
     $("#categories input").each(function () {
       if(this.checked)
         $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
-          alert(data.length);
+          alert(data.length + " - " + data);
+          
           for(i in data)  
             
             $( '#products' ).append( makeProduct(data[i]) );
