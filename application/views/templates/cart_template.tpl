@@ -66,16 +66,10 @@
           </tr>
           {/foreach}
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <th scope="row"> </th>
+            <td> </td>
+            <td><b>TOTAL</b></td>
+            <td>{$total}</td>
           </tr>
         </tbody>
       </table>
