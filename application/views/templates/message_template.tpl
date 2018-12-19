@@ -3,7 +3,7 @@
   <head>
     <title>LAB9_10</title>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5;url={$base_url}index.php/blog" />
+    <meta http-equiv="refresh" content="5;url={$base_url}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="LAB3.css" type ="text/css">-->
@@ -17,7 +17,7 @@
       {if $loggedin} 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{$base_url}index.php/blog/post">Post a new message</a>
+              <a class="nav-link" href="{$base_url}index.php/index/post">Post a new message</a>
             </li>
           </ul>
 
@@ -40,16 +40,16 @@
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item" href="#">Profile</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{$base_url}index.php/blog/logout">Log Out</a>
+              <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
             </div>
           </div> 
       {else}
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{$base_url}index.php/blog/login">Login</a>
+            <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{$base_url}index.php/blog/register">Register</a>
+            <a class="nav-link" href="{$base_url}index.php/index/register">Register</a>
           </li>
         </ul>
       {/if}
@@ -63,7 +63,7 @@
         <p>{$message}</p>
       </div>
       <div class="row justify-content-center align-items-center">
-        <p>You will be automatically redirected in 5 seconds. As an alternative press <a href="{$base_url}index.php/blog">here</a> to go to the first page.</p>
+        <p>You will be automatically redirected in 5 seconds. As an alternative press <a href="{$base_url}">here</a> to go to the first page.</p>
       </div>
 
       <!-- END SUCESSFORM -->
