@@ -19,7 +19,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/blog/post">Post a new message</a>
+        <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
       </li>
     </ul>
     {if $loggedin} 
@@ -29,8 +29,8 @@
         {$username}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
-        <div class="dropdown-divider"></div>cart
+        <a class="dropdown-item" href="{$base_url}index.php/orders/show">My Orders</a>
+        <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
       </div>
     </div> 
