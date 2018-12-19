@@ -8,7 +8,7 @@ class Products extends CI_Model {
 	{
 		return  $this->db->query("SELECT * FROM products")->result_array();
 	}
-	public function getProducts($cat_id)
+	public function getProductsByCategory($cat_id)
 	{	
 		$cat_id=htmlentities($cat_id);
 		return  $this->db->query("SELECT * FROM products where cat_id=$cat_id")->result_array();
