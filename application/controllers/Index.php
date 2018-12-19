@@ -31,7 +31,7 @@
 			$this->smarty->view('application/views/templates/index.tpl', $data);
 			//$this->load->view('welcome_message');
 		}
-		public function try(){
+		public function trys(){
 			echo "watch me";
 		}
 	}
