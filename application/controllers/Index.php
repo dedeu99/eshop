@@ -39,8 +39,8 @@
 				redirect('/');
 			
 
-            $this->form_validation->set_rules('name', 'Username', 'required|min_length[5]|max_length[12]|is_unique[costumers.name]', array('required' => 'You must provide a %s.' ,'is_unique'     => 'This %s already exists.'));
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[costumers.email]', array('required' => 'You must provide a %s.' ,'is_unique'     => 'This %s already exists.'));
+            $this->form_validation->set_rules('name', 'Username', 'required|min_length[5]|max_length[12]|is_unique[customers.name]', array('required' => 'You must provide a %s.' ,'is_unique'     => 'This %s already exists.'));
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[customers.email]', array('required' => 'You must provide a %s.' ,'is_unique'     => 'This %s already exists.'));
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]', array('required' => 'You must provide a %s.'));
 			$this->form_validation->set_rules('passwordConfirmation', 'Password Confirmation', 'required|matches[password]', array('required' => 'You must provide a %s.'));
 			
