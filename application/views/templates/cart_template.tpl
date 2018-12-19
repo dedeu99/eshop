@@ -50,7 +50,7 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          <button type="button" class="btn btn-primary" disable>Checkout</button> 
+          <button type="button" class="btn btn-primary" disabled>Checkout</button> 
         </caption>
         <thead class="thead-dark">
           <tr>
