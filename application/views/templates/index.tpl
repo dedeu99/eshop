@@ -136,10 +136,8 @@
       if(this.checked)
         $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
           
-          var response= JSON.parse(data);
-          alert(response.length + " - " + response);
           for(i in response)  
-            
+          alert(response[i]);  
             $( '#products' ).append( makeProduct(response[i]) );
           });
     });
