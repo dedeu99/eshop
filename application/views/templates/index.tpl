@@ -160,7 +160,7 @@
                     '<input class="form-control" id="input'+data.id+'" oninput="updateTotal('+data.id+','+data.price+')" type="number" value="1" min="1" id="example-number-input">'+
                   '</div>'+
                 '</div>'+
-                '<p> <b>Total:</b> <span id="total'+data.id+'">0</span> €</p>'+
+                '<p> <b>Total:</b> <span id="total'+data.id+'">'+data.price+'</span> €</p>'+
             
                 '<a href="#" class="btn btn-primary" onclick="addToCart('+data.id+')">🛒Add to cart</a>'+
               '</div>'+
