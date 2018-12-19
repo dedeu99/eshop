@@ -150,6 +150,7 @@
 			
 			foreach ($data['cart'] as $item) {
 				$item['quantity']=$_SESSION['cart'][intval($item['id'])];
+				var_dump(intval($item['id']));
 				var_dump($_SESSION['cart']);
 			}
 			//var_dump($_SESSION['cart']);
