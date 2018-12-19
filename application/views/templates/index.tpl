@@ -19,7 +19,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}index.php/index/cart">
+        <a class="nav-link text-center" href="{$base_url}index.php/index/cart">
         0,00€ in x items
         <br>
         🛒Shopping Cart
