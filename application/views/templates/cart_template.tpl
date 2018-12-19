@@ -62,6 +62,7 @@
             <td>{$item.name}</td>
             <td>{$item.price}</td>
             <td>{$item.quantity}</td>
+            <td>{$item.subtotal}</td>
           </tr>
           {/foreach}
           <tr>
