@@ -11,8 +11,6 @@ class Product extends CI_Model {
 	public function getProductsByCategory($cat_id)
 	{	
 		$cat_id=htmlentities($cat_id);
-		var_dump($cat_id);
-		var_dump($this->db->query("SELECT * FROM products where cat_id='$cat_id'")->result_array());
 		return "a text message";
 //		return  $this->db->query("SELECT * FROM products where cat_id='$cat_id'")->result_array();
 	}
