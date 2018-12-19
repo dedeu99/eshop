@@ -32,7 +32,6 @@
 			$this->smarty->view('application/views/templates/index.tpl', $data);
 			//$this->load->view('welcome_message');
 		}
-		public function register(){
 
 		public function register()
 		{
