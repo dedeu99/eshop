@@ -133,7 +133,7 @@
     var numCategories= $("#products > div").length;
     
     $("#categories input").each(function () {
-      alert(this+" "+this.value);
+      alert(this+" "+this.checked);
       $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
         
         for(i in data)  
