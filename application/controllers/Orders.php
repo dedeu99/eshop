@@ -19,14 +19,14 @@ class Orders extends CI_Controller {
 		{
 			if(intval($quantity)<=0)
 				return;
-			echo "<script> alert('PHP: ',".$quantity.");</script>"
+
 			if(!isset($_SESSION['cart']))
 				$_SESSION['cart']=[];
 
 			if(isset($_SESSION['cart'][$productid]))
-				$_SESSION['cart'][$productid]+=intval($quantity);
+				$_SESSION['cart'][$productid]+=$quantity;
 			else{
-				$_SESSION['cart'][$productid]= intval($quantity);
+				$_SESSION['cart'][$productid]= $quantity;
 			}
 		}
 	}
