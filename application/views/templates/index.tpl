@@ -98,10 +98,9 @@
               </div>
 
             </article>
-            
+          </div>
           <br>
           {/foreach}
-          </div>
         </div>
       </main>
     </div>
