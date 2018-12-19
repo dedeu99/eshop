@@ -11,11 +11,12 @@
 <body>
 <div class="container-flex">
 
-  <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+  <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
 
     <a class="navbar-brand" href="{$base_url}">
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
     </a>
+
 
     <ul class="navbar-nav">
       <li class="nav-item">
