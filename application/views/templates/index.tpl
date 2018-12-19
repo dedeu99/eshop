@@ -141,7 +141,7 @@
     });
     
   }
-  function makeProducts(data){
+  function makeProduct(data){
 
     return "<p>"+data['description']+"</p>";
   }
