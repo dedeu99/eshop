@@ -52,7 +52,7 @@
 
   <div >
     <div class="d-flex flex-row">
-      <div class="col-md-3 collapse" id="navbarToggleExternalContent">
+      <div class="col-md-3 collapse show" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
           <h4 class="text-white">Collapsed content</h4>
           <span class="text-muted">Toggleable via the navbar brand.</span>
