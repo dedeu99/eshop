@@ -146,7 +146,7 @@
 		public function cart()
 		{
 			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
-			echo $data['cart'];
+			var_dump( $data['cart']);
 			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
 
 		}
