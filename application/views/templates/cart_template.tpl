@@ -50,7 +50,11 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          <button type="button" class="btn btn-primary" disabled>Checkout</button> 
+          <button type="button" class="btn btn-primary" 
+          {if !$loggedin|$total<1}
+          disabled
+          {/if}
+          >Checkout</button> 
         </caption>
         <thead class="thead-dark">
           <tr>
