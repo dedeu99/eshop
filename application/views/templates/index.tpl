@@ -61,7 +61,7 @@
               <div id="categories">
                 {foreach $categories as $categorie}
                 <div class="checkbox" >
-                  <label><input type="checkbox" checked value="{$categorie.id}" onchange="updateProducts();">{$categorie.name}</label>
+                  <label><input type="checkbox" checked value="{$categorie.id}" onclick="updateProducts();">{$categorie.name}</label>
                 </div>
                 {/foreach}
               </div>
