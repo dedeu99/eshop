@@ -58,8 +58,8 @@
           <nav class="navbar navbar-dark bg-dark collapse" id="navbarToggleExternalContent">
             <h4 class="text-white">Categorias</h4>
             {foreach $categories as $categorie}
-            <div class="checkbox">
-              <label><input type="checkbox" value="">{$categorie.id}</label>
+            <div class="row checkbox">
+              <label><input type="checkbox" value="{$categorie.id}">{$categorie.name}</label>
             </div>
             {/foreach}
           </nav>
