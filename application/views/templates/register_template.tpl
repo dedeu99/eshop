@@ -10,15 +10,15 @@
   
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
-      <a class="navbar-brand" href="{$base_url}index.php/blog">
+      <a class="navbar-brand" href="{$base_url}">
         <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
       </a> 
       <ul class="navbar-nav" >
         <li class="nav-item">
-          <a class="nav-link" href="{$base_url}index.php/blog/login">Login</a>
+          <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{$base_url}index.php/blog/register">Register</a>
+          <a class="nav-link" href="{$base_url}index.php/index/register">Register</a>
         </li>
       </ul>
       

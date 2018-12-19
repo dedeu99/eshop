@@ -69,6 +69,58 @@
                	$this->smarty->view('application/views/templates/message_template.tpl', $data);
             }
 		}
+
+
+
+		public function check_email_exists($email_check){
+			$this->form_validation->set_message('check_email_exists' , 'This {field} does not exist please register first.');
+			return $this->customer->email_exists($email_check)==0?false:true;
+		}
+		public function login()
+		{
+			if($this->isloggedin())
+				redirect('/');
+
+
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_check_email_exists', array('required' => 'You must provide a %s.' ));
+            $this->form_validation->set_rules('password', 'Password', 'required|min_length[7]', array('required' => 'You must provide a %s.'));
+			
+
+
+			$data['base_url'] = base_url();
+            if ($this->form_validation->run() == FALSE)
+            {
+            	$data['message'] = validation_errors(' ', '<br>');
+            	
+            	$data['email'] = set_value('email');
+            	
+                $this->smarty->view('application/views/templates/login_template.tpl', $data);
+            }
+            else
+            {
+            	
+            	$user=$this->customer->validate_user( $_POST['email'], hash('sha512',$_POST['password']));
+				if(is_null($user)){  		
+               		$data['message']="The password entered does not match";
+               		$data['email'] = set_value('email');
+               		$this->smarty->view('application/views/templates/login_template.tpl', $data);
+               	}else{
+               		$data['background']="success";
+               		$name = $user['name'];
+               		$id = $user['id'];
+               		$data['message']="User $name logged in sucessfully";
+
+               		$this->session->user=$name;
+               		$this->session->userId=$id;
+               		$data['loggedin']=true;
+               		$data['username'] = $this->session->user;
+
+
+
+
+               		$this->smarty->view('application/views/templates/message_template.tpl', $data);
+               	} 
+            }    
 		
 	}
 ?>
