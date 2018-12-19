@@ -18,20 +18,9 @@
     </a>
 
 
-
+    {if $loggedin} 
     <div class="dropdown" >
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-        <span class="rounded-circle">
-          <img 
-          {if file_exists("img/user{$id}.jpg")} 
-          {assign "imgpath" "img/user{$id}.jpg"} 
-
-          src="{$base_url}{$imgpath}"
-          {else} 
-          src="{$base_url}img/user.jpg" 
-          {/if}
-          style="width:40px;" alt="User Image">
-        </span>
         {$username}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
@@ -40,6 +29,7 @@
         <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
       </div>
     </div> 
+    {else}
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
@@ -48,6 +38,7 @@
         <a class="nav-link" href="{$base_url}index.php/index/register">Register</a>
       </li>
     </ul>
+    {/if}
   </nav>
 
   <div >

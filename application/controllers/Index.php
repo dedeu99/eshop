@@ -26,6 +26,10 @@
 			return isset($this->session->userId)&&isset($this->session->user);
 		}
 		public function index(){
+			if($this->isloggedin()){
+				$data['username'] = $this->session->user;
+				$data['loggedin']=true;
+			}
 			$data['base_url'] = base_url();
 			$data['products'] = $this->product->getProducts();
 			$data['categories'] = $this->product->getCategories();
