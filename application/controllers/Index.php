@@ -147,7 +147,11 @@
 		{
 			$data['base_url'] = base_url();
 			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
-			var_dump( $data['cart']);
+			
+			foreach ($data['cart'] as $item) {
+				$item['quantity']=$_SESSION['cart'][$item]['quantity'];
+			}
+
 			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
 
 		}
