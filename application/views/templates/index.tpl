@@ -50,60 +50,37 @@
     </ul>
   </nav>
 
-  <div class="container-fluid">
-    <div class="row d-flex">
-      
-
-      <div class="col-md-3 collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h4 class="text-white">Collapsed content</h4>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      
-      <main class="col-md-9">
-        
-        <div class="row ">
-          <div class="col-xs-12">
-            <nav class="navbar navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
-          </div>
-        </div>
-        <div class="row">
-          {foreach $products as $product}
-          <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
+  <div >
+    <div class="d-flex flex-nowrap">
+      {foreach $products as $product}
+        <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
+          
+          <article class="card text-white bg-dark border-light text-center">
             
-            <article class="card text-white bg-dark border-light text-center">
-              
-              <div class="card-header"><h4>{$product.name}</h4></div>
-              <div class="card-body">
-                <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">
-                <p class="card-text">{$product.description}</p>
-                <hr>
-                <p><b>Price per unit:</b> {$product.price}€</p>
-              </div> 
-              <div class="card-footer align-contents-center text-center">
-            
-                <div class="form-group row text-right ">
-                  <label for="example-number-input" class="col-6 col-form-label">Quantity:</label>
-                  <div class="col-6">
-                    <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
-                  </div>
+            <div class="card-header"><h4>{$product.name}</h4></div>
+            <div class="card-body">
+              <img class="card-img-top w-50" style="width: 100%;"src="{$base_url}{$product.image}" alt="Card image">
+              <p class="card-text">{$product.description}</p>
+              <hr>
+              <p><b>Price per unit:</b> {$product.price}€</p>
+            </div> 
+            <div class="card-footer align-contents-center text-center">
+          
+              <div class="form-group row text-right ">
+                <label for="example-number-input" class="col-6 col-form-label">Quantity:</label>
+                <div class="col-6">
+                  <input class="form-control" id="input{$product.id}" oninput="updateTotal({$product.id},{$product.price})" type="number" value="0" min="0" id="example-number-input">
                 </div>
-                <p> <b>Total:</b> <span id="total{$product.id}">0</span> €</p>
-            
-                <a href="#" class="btn btn-primary">🛒Add to cart</a>
               </div>
+              <p> <b>Total:</b> <span id="total{$product.id}">0</span> €</p>
+          
+              <a href="#" class="btn btn-primary">🛒Add to cart</a>
+            </div>
 
-            </article>
-          </div>
-          <br>
-          {/foreach}
+          </article>
         </div>
-      </main>
+        <br>
+        {/foreach}
     </div>
     
     <ul class="pagination justify-content-end">
