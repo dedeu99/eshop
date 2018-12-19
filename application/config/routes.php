@@ -58,12 +58,6 @@ $route['default_controller'] = 'index';
 
 
 
-
-$route['try1']='index.php/try';
-$route['try2']='index/try';
-$route['try3']='try';
-$route['try4']='/try';
-
 //'index.php/products';
 $route['product/(:num)'] = /*base_url()+*/'index.php/products/getProductsByCategory/$1';
 $route['404_override'] = '';

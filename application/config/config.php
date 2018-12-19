@@ -35,7 +35,7 @@ $config['base_url'] = '/~a62362/LAB12/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
