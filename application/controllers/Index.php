@@ -10,7 +10,7 @@
 			
 			
 
-			$this->load->model('products');
+			$this->load->model('product');
 
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');

@@ -7,7 +7,7 @@
 		public function __construct()
 		{
 			parent::__construct();
-			$this->load->model('products');
+			$this->load->model('product');
 		}
 		public function getProductsByCategory($cat_id){
 			return json_encode($this->products->getProductsByCategory());
