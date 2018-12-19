@@ -12,6 +12,7 @@
 
 			$this->load->model('product');
 			$this->load->model('customer');
+			$this->load->model('order');
 
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
@@ -140,6 +141,13 @@
 	   		
 	   		$this->smarty->view('application/views/templates/message_template.tpl', $data);
 			
+		}
+
+		public function cart()
+		{
+			$data['cart']=$_SESSION['cart'];
+			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
+
 		}
 	}
 ?>

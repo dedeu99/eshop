@@ -22,10 +22,6 @@
 			else{
 				$_SESSION['cart'][$productid]= $quantity;
 			}
-			
-		}
-		public function showOrders()
-		{
 		}
 	}
 ?>
