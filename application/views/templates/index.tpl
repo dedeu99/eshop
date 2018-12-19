@@ -128,9 +128,10 @@
     
   }
   function updateProducts(){
-    var products=document.getElementById("products");
-    var categories=document.getElementById("categories");
+    /*var products=document.getElementById("products");
+    var categories=document.getElementById("categories");*/
     var numCategories= $("#products > div").length;
+    alert(numCategories);
     $(".categories").each(function () {
       $.get("{$base_url}index.php/products/getProductsByCategory/"+$this.value, function(data,status){
         for(i in data)  
