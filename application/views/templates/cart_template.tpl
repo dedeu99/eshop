@@ -51,7 +51,7 @@
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
           <button type="button" class="btn btn-primary" 
-          {if !$loggedin|($total<1)}
+          {if !$loggedin||($total<1)}
           disabled
           {/if}
           >Checkout</button> 
