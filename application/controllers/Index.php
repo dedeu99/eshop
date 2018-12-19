@@ -158,7 +158,11 @@
 				++$i;
 			}
 			$data['total']=$total;
-			$data['loggedin']=$this->isloggedin();
+			$data['loggedin']=false;
+			if($this->isloggedin()){
+				$data['username'] = $this->session->user;
+				$data['loggedin']=true;
+			}
 			//var_dump($_SESSION['cart']);
 			//var_dump($data['cart']);
 
