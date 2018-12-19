@@ -149,7 +149,7 @@
 			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
 			
 			foreach ($data['cart'] as $item => $value) {
-				$item['quantity']=$_SESSION['cart'][intval($item['id'])];
+				$data['cart'][$item]['quantity']=$_SESSION['cart'][$item['id']];
 				//var_dump(intval($item['id']));     int 1
 				//var_dump($_SESSION['cart']);		arr[1]="10"
 				//var_dump($_SESSION['cart'][intval($item['id'])]); "10"
