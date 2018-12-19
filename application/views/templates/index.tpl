@@ -56,8 +56,12 @@
       <div class="flex-column">
         <div class="sticky-top flex-row">
           <nav class="navbar navbar-dark bg-dark collapse" id="navbarToggleExternalContent">
-            <h4 class="text-white">Collapsed content</h4>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+            <h4 class="text-white">Categorias</h4>
+            {foreach $categorias as $categoria}
+            <div class="checkbox">
+              <label><input type="checkbox" value="">{$categoria.id}</label>
+            </div>
+            {/foreach}
           </nav>
         </div>
       </div>
