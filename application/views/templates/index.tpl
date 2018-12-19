@@ -19,7 +19,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link text-center text-white" href="{$base_url}index.php/index/cart">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/cart">
         0,00€ in x items
         <br>
         🛒Shopping Cart
@@ -42,11 +42,11 @@
     {else}
     <ul class="navbar-nav">
 
-      <li class="nav-item text-white">
-        <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/login">Login</a>
       </li>
-      <li class="nav-item text-white">
-        <a class="nav-link" href="{$base_url}index.php/index/register">Register</a>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/register">Register</a>
       </li>
     </ul>
     {/if}
