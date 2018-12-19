@@ -11,7 +11,7 @@
 <body>
 <div class="container-flex">
 
-  <nav class="sticky-top navbar text-white navbar-expand-sm navbar-dark bg-dark justify-content-between">
+  <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
 
     <a class="navbar-brand" href="{$base_url}">
       <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
@@ -19,7 +19,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link text-center" href="{$base_url}index.php/index/cart">
+        <a class="nav-link text-center  text-white" href="{$base_url}index.php/index/cart">
         0,00€ in x items
         <br>
         🛒Shopping Cart
@@ -29,7 +29,7 @@
     </ul>
     {if $loggedin} 
 
-    <div class="dropdown" >
+    <div class="dropdown " >
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
         {$username}
       </button>
@@ -40,7 +40,7 @@
       </div>
     </div> 
     {else}
-    <ul class="navbar-nav">
+    <ul class="navbar-nav  text-white">
 
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
