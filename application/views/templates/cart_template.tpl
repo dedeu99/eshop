@@ -63,6 +63,7 @@
             <td>{$item.price}</td>
             <td>{$item.quantity}</td>
           </tr>
+          {/foreach}
           <tr>
             <th scope="row">2</th>
             <td>Jacob</td>
