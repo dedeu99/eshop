@@ -10,7 +10,7 @@ class Product extends CI_Model {
 	}
 	public function getProductsByCategory($cat_id)
 	{	
-		$cat_id=htmlentities($cat_id);
+		//$cat_id=htmlentities($cat_id);
 		return  $this->db->query("SELECT * FROM products where cat_id=$cat_id")->result_array();
 	}
 	public function getCategories()
