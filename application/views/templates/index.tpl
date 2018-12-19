@@ -52,21 +52,24 @@
 
   <div >
     <div class="d-flex flex-row">
-      <div class="position-fixed col-md-3 collapse show" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h4 class="text-white">Collapsed content</h4>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
+      <div class="sticky-top">
+        <div class="col-md-3 collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark">
+            <h4 class="text-white">Collapsed content</h4>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
         </div>
       </div>
+      
       <div class="flex-column">
-        <div class="row">
-          <nav class="bg-dark" style="position: fixed;max-width: 20%">
+        <div class="sticky-top flex-row">
+          <nav class="navbar navbar-dark bg-dark" >
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>
         </div>
-        <div class="row">
+        <div class="d-flex flex-wrap">
         {foreach $products as $product}
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
             
