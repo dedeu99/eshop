@@ -151,7 +151,7 @@
 			$i=0;
 			foreach ($data['cart'] as $item) {
 				if(isset($_SESSION['cart'][$item['id']]))
-					$data['cart'][$i]['quantity']=isset($_SESSION['cart'][$item['id']]);
+					$data['cart'][$i]['quantity']=$_SESSION['cart'][$item['id']];
 				++$i;
 			}
 			print_r($data['cart']);
