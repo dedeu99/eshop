@@ -171,7 +171,7 @@
   }
 
   function addToCart(productid){
-      var quantity= $( '#input'+productid ).value;
+      var quantity= $( '#input'+productid );
       alert(quantity);
       $.get("{$base_url}index.php/orders/orderProduct/"+productid+"/"+quantity, function(data,status){
           
