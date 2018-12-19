@@ -22,6 +22,8 @@
 			else{
 				$_SESSION['cart'][$productid]= $quantity;
 			}
+
+			var_dump($_SESSION['cart']);
 		}
 	}
 ?>
