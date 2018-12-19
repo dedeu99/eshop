@@ -158,6 +158,7 @@
 				++$i;
 			}
 			$data['total']=$total;
+			$data['loggedin']=$this->isloggedin();
 			//var_dump($_SESSION['cart']);
 			//var_dump($data['cart']);
 
