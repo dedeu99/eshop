@@ -13,7 +13,7 @@
       <a class="navbar-brand" href="{$base_url}">
         <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
       </a>
-    
+
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
@@ -78,6 +78,7 @@
           </tr>
         </tbody>
       </table>
+      <button type="button" class="btn btn-primary">Checkout</button>
     </div>
       
     <br>
