@@ -45,7 +45,7 @@
 
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
-        <caption>List of users</caption>
+        <caption>Your cart</caption>
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
