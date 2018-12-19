@@ -152,7 +152,7 @@
                 '<hr>'+
                 '<p><b>Price per unit: </b>'+data.price+'€</p>'+
               '</div> '+
-              '<div class="card-footer align-contents-center text-center">'+
+              '<div class="card-footer align-contents-around text-center">'+
             
                 '<div class="form-group row text-right ">'+
                   '<label for="example-number-input" class="col-6 col-form-label">Quantity:</label>'+
