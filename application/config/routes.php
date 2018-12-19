@@ -59,6 +59,16 @@ $route['default_controller'] = 'index';
 
 
 //'index.php/products';
-$route['product/:num'] = base_url()+'index.php/products/getProductsByCategory/$1';
+$route['product/:num'] = 'index.php/products/getProductsByCategory/$1';
+$route['product2/:num'] = '/products/getProductsByCategory/$1';
+$route['product3/:num'] = '/index.php/products/getProductsByCategory/$1';
+$route['product4/:num'] = 'products/getProductsByCategory/$1';
+$route['product5/:num'] = 'LAB12/products/getProductsByCategory/$1';
+$route['product6/:num'] = '/LAB12/products/getProductsByCategory/$1';
+$route['product7/:num'] = '/~a62362/LAB12/products/getProductsByCategory/$1';
+$route['product8/:num'] = '~a62362/LAB12/products/getProductsByCategory/$1';
+
+
+$config['base_url'] = '/~a62362/LAB12/';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
