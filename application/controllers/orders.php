@@ -15,11 +15,11 @@ class Orders extends CI_Controller {
 			$this->load->view('welcome_message');
 		}
 
-		public function order($productid=-1,$quantity=0)
+		public function orderProduct($productid=-1,$quantity=0)
 		{
 			if(!isset($_SESSION['cart']))
 				$_SESSION['cart']=[];
-			
+
 			if(isset($_SESSION['cart'][$productid]))
 				$_SESSION['cart'][$productid]+=$quantity;
 			else{
