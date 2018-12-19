@@ -10,7 +10,7 @@
 			
 			
 
-			$this->load->model('product');
+			$this->load->model('costumer');
 
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
@@ -30,9 +30,6 @@
 			$data['categories'] = $this->product->getCategories();
 			$this->smarty->view('application/views/templates/index.tpl', $data);
 			//$this->load->view('welcome_message');
-		}
-		public function try(){
-			echo "watch me";
 		}
 	}
 ?>
