@@ -10,10 +10,13 @@
 			$this->load->model('order');
 			$this->load->library('session');
 		}
+		public function index(){
+			echo "its here";
+		}
 		/*public function is_loggedin(){
 			return isset($this->session->userId)&&isset($this->session->user);
 		}*/
-		public function order($productid,$quantity)
+		public function order($productid=0,$quantity=0)
 		{
 			if(!isset($_SESSION['cart']))
 				$_SESSION['cart']=[];
