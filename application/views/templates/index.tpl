@@ -32,6 +32,11 @@
     {else}
     <ul class="navbar-nav">
       <li class="nav-item">
+        <a class="nav-link" href="{$base_url}#">🛒Shopping Cart</a>
+      </li>
+
+
+      <li class="nav-item">
         <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
       </li>
       <li class="nav-item">
@@ -145,7 +150,7 @@
                 '<img class="card-img-top w-50" style="width: 100%;"src="{$base_url}'+data.image+'" alt="Card image">'+
                 '<p class="card-text">'+data.description+'</p>'+
                 '<hr>'+
-                '<p><b>Price per unit:</b>'+data.price+'€</p>'+
+                '<p><b>Price per unit: </b>'+data.price+'€</p>'+
               '</div> '+
               '<div class="card-footer align-contents-center text-center">'+
             
@@ -157,12 +162,24 @@
                 '</div>'+
                 '<p> <b>Total:</b> <span id="total'+data.id+'">0</span> €</p>'+
             
-                '<a href="#" class="btn btn-primary">🛒Add to cart</a>'+
+                '<a href="#" class="btn btn-primary" onclick="addToCart(data.id)">🛒Add to cart</a>'+
               '</div>'+
 
             '</article>'+
           '</div>'+
           '<br>';
+  }
+
+  function addToCart(productid){
+      var quantity= $( '#input'+productid ).value;
+      $.post("{$base_url}index.php/orders/order"+productid+"/"+quantity, function(data,status){
+          
+          var response= JSON.parse(data);
+          
+          for(var i in response)  
+            alert(response[i]);  
+            //$( '#products' ).append( makeProduct(response[i]) );
+      });
   }
 </script>
 </html>

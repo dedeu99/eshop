@@ -7,25 +7,22 @@
 		public function __construct()
 		{
 			parent::__construct();
-			
-			
-
-			$this->load->model('blog_model');
-
-			//$this->load->helper('url_helper');
-			$this->load->helper('url');
+			$this->load->model('order');
 			$this->load->library('session');
-
-			
-			//$this->load->helper(array('form', 'url'));
-
-            $this->load->library('form_validation');
 		}
 		/*public function is_loggedin(){
 			return isset($this->session->userId)&&isset($this->session->user);
 		}*/
-		public function createOrder()
+		public function order($productid,$quantity)
 		{
+			if(!isset($_SESSION['cart']))
+				$_SESSION['cart']=[];
+			if(isset($_SESSION['cart'][$productid]))
+				$_SESSION['cart'][$productid]+=$quantity;
+			else{
+				$_SESSION['cart'][$productid]= $quantity;
+			}
+			
 		}
 		public function showOrders()
 		{
