@@ -113,6 +113,8 @@
                		$data['background']="success";
                		$name = $user['name'];
                		$id = $user['id'];
+
+
                		$data['message']="User $name logged in sucessfully";
 
                		$this->session->user=$name;
@@ -157,7 +159,7 @@
 				}
 				++$i;
 			}
-			$data['total']=$total;
+			$data['total']=$_SESSION['total']=$total;
 			$data['loggedin']=false;
 			if($this->isloggedin()){
 				$data['username'] = $this->session->user;

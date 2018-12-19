@@ -20,7 +20,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link text-white" href="{$base_url}index.php/index/cart">
-        0,00€ in x items
+        {$total|0}€ in {$nitems|0} items
         <br>
         🛒Shopping Cart
 

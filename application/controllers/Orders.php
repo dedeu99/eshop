@@ -17,7 +17,7 @@ class Orders extends CI_Controller {
 
 		public function orderProduct($productid=-1,$quantity=-1)
 		{
-			
+
 			if($quantity<=0)
 				return;
 
@@ -29,6 +29,17 @@ class Orders extends CI_Controller {
 			else{
 				$_SESSION['cart'][$productid]= $quantity;
 			}
+		}
+		public function placeOrder(){
+			
+
+			createOrder($_SESSION['user_id'],$_SESSION['total'],$_SESSION['cart']);
+			unset($_SESSION['cart']);
+			$_SESSION['total'])=0;
+			showOrders();
+		}
+		public function showOrders(){
+			
 		}
 	}
 ?>
