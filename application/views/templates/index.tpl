@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-flex">
 
   <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
 
@@ -115,9 +115,7 @@
   }
 
 
-  function toggle(object){
-    
-  }
+  $( document ).ready( updateProducts );
   function updateProducts(){
     /*var products=document.getElementById("products");
     var categories=document.getElementById("categories");*/

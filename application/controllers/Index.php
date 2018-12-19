@@ -126,5 +126,20 @@
                	} 
             }    
 		}
+
+		public function logout(){
+			if(!$this->isloggedin())
+				redirect('/');
+
+			$data['base_url'] = base_url();
+	   		$data['background']="success";
+	   		$name = $this->session->user;
+	   		$data['message']="User $name logged out sucessfully";
+	   		$data['loggedin']=false;
+	   		$this->session->sess_destroy();
+	   		
+	   		$this->smarty->view('application/views/templates/message_template.tpl', $data);
+			
+		}
 	}
 ?>
