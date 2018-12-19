@@ -69,6 +69,6 @@
                	$this->smarty->view('application/views/templates/message_template.tpl', $data);
             }
 		}
-		}
+		
 	}
 ?>
