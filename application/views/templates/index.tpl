@@ -162,7 +162,7 @@
                 '</div>'+
                 '<p> <b>Total:</b> <span id="total'+data.id+'">0</span> €</p>'+
             
-                '<a href="#" class="btn btn-primary" onclick="addToCart(data.id)">🛒Add to cart</a>'+
+                '<a href="#" class="btn btn-primary" onclick="addToCart('+data.id+')">🛒Add to cart</a>'+
               '</div>'+
 
             '</article>'+
