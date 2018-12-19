@@ -52,7 +52,7 @@
 
   <div >
     <div class="d-flex flex-row">
-      <div class="sticky-top">
+      <div class="sticky-top flex-column">
         <div class="col-md-3 collapse" id="navbarToggleExternalContent">
           <div class="bg-dark">
             <h4 class="text-white">Collapsed content</h4>
