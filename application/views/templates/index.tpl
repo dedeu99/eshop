@@ -56,13 +56,15 @@
       <div class="flex-column">
         <div class="sticky-top flex-row">
           <div class="navbar navbar-dark bg-dark collapse text-white" id="navbarToggleExternalContent">
-            <fieldset style="border-color: white;">
+            <fieldset >
             <legend><h4>Categorias:</h4></legend>
-              {foreach $categories as $categorie}
-              <div class="checkbox" id="cat{$categorie.id}">
-                <label><input type="checkbox" value="{$categorie.id}">{$categorie.name}</label>
+              <div id="categories">
+                {foreach $categories as $categorie}
+                <div class="checkbox" >
+                  <label><input type="checkbox" checked value="{$categorie.id}" onchange="updateProducts();">{$categorie.name}</label>
+                </div>
+                {/foreach}
               </div>
-              {/foreach}
             </fieldset>
           </div>
         </div>
@@ -75,7 +77,7 @@
             </button>
           </nav>
         </div>
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap" id="products">
         {foreach $products as $product}
           <div class="card-group col-xs-12 col-sm-6 col-md-4 mb-1">
             
@@ -153,6 +155,10 @@
 
   function toggle(object){
     
+  }
+  function updateProducts(){
+    var products=document.getElementById("products");
+    var categories=document.getElementById("categories");
   }
 </script>
 </html>
