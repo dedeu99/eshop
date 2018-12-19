@@ -52,7 +52,7 @@
 
   <div >
     <div class="d-flex flex-row">
-      <div class="col-md-3 collapse show" id="navbarToggleExternalContent">
+      <div class="sticky-top  col-md-3 collapse show" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
           <h4 class="text-white">Collapsed content</h4>
           <span class="text-muted">Toggleable via the navbar brand.</span>
@@ -60,7 +60,7 @@
       </div>
       <div class="flex-column">
         <div class="row">
-          <nav class="navbar navbar-dark bg-dark">
+          <nav class="navbar sticky-top  navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
               <span class="navbar-toggler-icon"></span>
             </button>
