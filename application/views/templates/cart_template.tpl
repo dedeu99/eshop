@@ -50,7 +50,7 @@
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
-          <button type="button" class="btn btn-primary" 
+          <button type="button" href="{$base_url}index.php/orders/placeOrder" class="btn btn-primary" 
           {if !$loggedin||($total<1)}
           disabled
           {/if}
