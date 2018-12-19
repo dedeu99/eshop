@@ -12,7 +12,7 @@
 
 			$this->load->model('product');
 			$this->load->model('customer');
-			$this->load->model('order');
+			//$this->load->model('order');
 
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
@@ -145,7 +145,8 @@
 
 		public function cart()
 		{
-			$data['cart']=isset($_SESSION['cart'])?$_SESSION['cart']:[];
+			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
+			echo $data['cart'];
 			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
 
 		}
