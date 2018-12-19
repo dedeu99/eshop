@@ -149,7 +149,7 @@
 			$data['cart']=isset($_SESSION['cart'])?$this->product->getProductsInfo($_SESSION['cart']):[];
 			
 			foreach ($data['cart'] as $item) {
-				$item['quantity']=$_SESSION['cart'][$item['id']]['quantity'];
+				$item['quantity']=$_SESSION['cart'][$item['id']];
 			}
 
 			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
