@@ -12,7 +12,7 @@
 
 			$this->load->model('product');
 			$this->load->model('costumer');
-w
+
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
 			$this->load->library('session');
