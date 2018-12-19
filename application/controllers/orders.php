@@ -5,7 +5,7 @@ class Orders extends CI_Controller {
 		public function __construct()
 		{
 			parent::__construct();
-	
+			$this->load->model('order');
 			$this->load->library('session');
 
 			
@@ -25,9 +25,6 @@ class Orders extends CI_Controller {
 			else{
 				$_SESSION['cart'][$productid]= $quantity;
 			}
-
-			var_dump($_SESSION['cart']);
-			echo "a";
 		}
 	}
 ?>

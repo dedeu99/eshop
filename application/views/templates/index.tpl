@@ -32,7 +32,7 @@
     {else}
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="{$base_url}#">🛒Shopping Cart</a>
+        <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
       </li>
 
 
@@ -175,11 +175,7 @@
       alert(productid);
       $.get("{$base_url}index.php/orders/orderProduct/"+productid+"/"+quantity, function(data,status){
           
-          var response= JSON.parse(data);
           
-          for(var i in response)  
-            alert(response[i]);  
-            //$( '#products' ).append( makeProduct(response[i]) );
       });
   }
 </script>
