@@ -27,7 +27,7 @@
       {else}
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="{$base_url}#">🛒Shopping Cart</a>
+          <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
         </li>
 
 

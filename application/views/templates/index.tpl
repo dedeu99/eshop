@@ -113,8 +113,8 @@
   function updateTotal(id,price){
 
     var input=document.getElementById("input"+id);
-    if(input.value<0)
-      input.value=0;
+    if(input.value<1)
+      input.value=1;
     var total=document.getElementById("total"+id);
     total.textContent=input.value*price;
   }
@@ -157,7 +157,7 @@
                 '<div class="form-group row text-right ">'+
                   '<label for="example-number-input" class="col-6 col-form-label">Quantity:</label>'+
                   '<div class="col-6">'+
-                    '<input class="form-control" id="input'+data.id+'" oninput="updateTotal('+data.id+','+data.price+')" type="number" value="0" min="0" id="example-number-input">'+
+                    '<input class="form-control" id="input'+data.id+'" oninput="updateTotal('+data.id+','+data.price+')" type="number" value="1" min="1" id="example-number-input">'+
                   '</div>'+
                 '</div>'+
                 '<p> <b>Total:</b> <span id="total'+data.id+'">0</span> €</p>'+
