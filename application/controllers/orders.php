@@ -21,9 +21,9 @@ class Orders extends CI_Controller {
 				$_SESSION['cart']=[];
 
 			if(isset($_SESSION['cart'][$productid]))
-				$_SESSION['cart'][$productid]+=$quantity;
+				$_SESSION['cart'][$productid]+=intval($quantity);
 			else{
-				$_SESSION['cart'][$productid]= $quantity;
+				$_SESSION['cart'][$productid]= intval($quantity);
 			}
 		}
 	}
