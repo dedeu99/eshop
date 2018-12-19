@@ -57,9 +57,9 @@
         <div class="sticky-top flex-row">
           <nav class="navbar navbar-dark bg-dark collapse" id="navbarToggleExternalContent">
             <h4 class="text-white">Categorias</h4>
-            {foreach $categorias as $categoria}
+            {foreach $categories as $categorie}
             <div class="checkbox">
-              <label><input type="checkbox" value="">{$categoria.id}</label>
+              <label><input type="checkbox" value="">{$categorie.id}</label>
             </div>
             {/foreach}
           </nav>
