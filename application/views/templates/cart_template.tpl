@@ -45,12 +45,12 @@
 
     <div class="container shadow ">
       <table class="table table-striped table-hover table-responsive-xs">
-        <caption>Your cart</caption>
+        <caption>Your cart </caption>
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
-            <th scope="col">Price</th>
+            <th scope="col">Price per unit</th>
             <th scope="col">Quantity</th>
             <th scope="col">Subtotal</th>
           </tr>
@@ -60,9 +60,9 @@
           <tr>
             <th scope="row">{$item.id}</th>
             <td>{$item.name}</td>
-            <td>{$item.price}</td>
+            <td>{$item.price}€</td>
             <td>{$item.quantity}</td>
-            <td>{$item.subtotal}</td>
+            <td>{$item.subtotal}€</td>
           </tr>
           {/foreach}
           <tr>
@@ -70,7 +70,7 @@
             <td> </td>
             <td> </td>
             <td><b>TOTAL</b></td>
-            <td>{$total}</td>
+            <td>{$total}€</td>
           </tr>
         </tbody>
       </table>
