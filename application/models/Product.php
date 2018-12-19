@@ -1,22 +1,25 @@
 <?php
-class Blog_model extends CI_Model {
+class Product extends CI_Model {
 	public function __construct()
 	{
 		$this->load->database();
 	}
-	public function createOrder()
+	public function getProducts()
 	{
-		
+		return  $this->db->query("SELECT * FROM products")->result_array();
 	}
-	public function getOrders($costumer_id)
+	public function getProductsByCategory($cat_id)
+	{	
+		$cat_id=htmlentities($cat_id);
+		return  $this->db->query("SELECT * FROM products where cat_id=$cat_id")->result_array();
+	}
+	public function getCategories()
+	{	
+		return $this->db->query("SELECT * FROM categories")->result_array();
+	}
+	public function getProduct($product_id)
 	{
-		
+		$product_id=htmlentities($product_id);		
 	}
-	public function getOrder($order_id)
-	{
-		
-	}
-
-
 }
 ?>
