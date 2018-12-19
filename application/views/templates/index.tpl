@@ -131,13 +131,13 @@
     /*var products=document.getElementById("products");
     var categories=document.getElementById("categories");*/
     var numCategories= $("#products > div").length;
-    
+    $( '#products' ).innerHTML="";
     $("#categories input").each(function () {
       if(this.checked)
         $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
           
           var response= JSON.parse(data);
-          alert(response);
+          //alert(response);
           for(var i in response)  
           //alert(response[i]);  
             $( '#products' ).append( makeProduct(response[i]) );
