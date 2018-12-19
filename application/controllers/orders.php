@@ -19,7 +19,7 @@ class Orders extends CI_Controller {
 		{
 			if(intval($quantity)<=0)
 				return;
-			
+			var_dump($quantity);
 			if(!isset($_SESSION['cart']))
 				$_SESSION['cart']=[];
 
