@@ -94,9 +94,10 @@
 
             </article>
           </div>
-        </div>
-        <br>
+          <br>
         {/foreach}
+        </div>
+        
       </div>
     </div>
     
