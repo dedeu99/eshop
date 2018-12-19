@@ -58,6 +58,15 @@
           <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
       </div>
+      <div class="flex-column">
+        <div class="col-xs-12">
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
     </div>
     
     <ul class="pagination justify-content-end">
