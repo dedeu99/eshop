@@ -56,7 +56,7 @@
       <div class="flex-column">
         <div class="sticky-top flex-row">
           <div class="navbar navbar-dark bg-dark collapse text-white" id="navbarToggleExternalContent">
-            <fieldset>
+            <fieldset style="border-color: white;">
             <legend><h4>Categorias:</h4></legend>
               {foreach $categories as $categorie}
               <div class="checkbox" id="cat{$categorie.id}">
