@@ -50,8 +50,8 @@
     </ul>
   </nav>
 
-  <div class="container-fluid">
-    <div class="row d-flex">
+  <div class="d-flex">
+    <div class="flex-row">
       
 
       <div class="col-md-3 collapse" id="navbarToggleExternalContent">
@@ -61,9 +61,9 @@
         </div>
       </div>
       
-      <main class="col-md-9">
+      <main class="col-md-9 flex-column">
         
-        <div class="row ">
+        <div class="flex-row ">
           <div class="col-xs-12">
             <nav class="navbar navbar-dark bg-dark">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
