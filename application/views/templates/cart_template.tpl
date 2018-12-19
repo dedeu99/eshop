@@ -49,17 +49,19 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Subtotal</th>
           </tr>
         </thead>
         <tbody>
+          {foreach $cart as $item}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{$item.id}</th>
+            <td>{$item.name}</td>
+            <td>{$item.price}</td>
+            <td>{$item.quantity}</td>
           </tr>
           <tr>
             <th scope="row">2</th>
