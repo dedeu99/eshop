@@ -7,7 +7,7 @@ class Orders extends CI_Controller {
 		{
 			$this->load->view('welcome_message');
 		}
-		
+
 		public function order($productid=0,$quantity=0)
 		{
 			if(!isset($_SESSION['cart']))
@@ -19,6 +19,7 @@ class Orders extends CI_Controller {
 			}
 
 			var_dump($_SESSION['cart']);
+			echo "a";
 		}
 	}
 ?>
