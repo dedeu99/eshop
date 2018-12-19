@@ -153,6 +153,7 @@
 				var_dump($item['id']);
 			}
 			var_dump($_SESSION['cart']);
+			var_dump($data['cart']);
 
 			$this->smarty->view('application/views/templates/cart_template.tpl', $data);
 
