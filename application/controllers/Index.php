@@ -26,6 +26,13 @@
 				$data['username'] = $this->session->user;
 				$data['loggedin']=true;
 			}
+			if(!isset($this->session->total))
+				$this->session->total=0;
+			$data['total']=$this->session->total;
+			if(isset($this->session->cart))
+				$data['nitems']=count($this->session->cart);
+			else
+				$data['nitems']=0;
 			$data['base_url'] = base_url();
 			$data['products'] = $this->product->getProducts();
 			$data['categories'] = $this->product->getCategories();
