@@ -81,6 +81,7 @@
 
     <script>
       $('#ordersModal').on('show.bs.modal', function (event) {
+        alert("ITS WORKING?");
         var button = $(event.relatedTarget) // Button that triggered the modal
 
 
@@ -88,7 +89,9 @@
           var modal = $(this)
           var table= modal.find('.modal-body table').val(recipient);
           console.log(data);
+          alert("GET MADE");
           for (var elem in data) {  
+            alert("IM WORKING");
             console.log(elem+" = "+data[elem]);
     /*        var row = table.insertRow(0);
 
