@@ -55,8 +55,8 @@
           <tr>
             <th scope="row">{$order.id}</th>
             <td>{$order.created_at}</td>
-            <td>{$order.status}€</td>
-            <td>{$order.total}</td>
+            <td>{$order.status}</td>
+            <td>{$order.total}€</td>
             <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ordersModal" data-order="{$order.id}">Show more</button></td>
 
            </tr>
@@ -83,7 +83,7 @@
       <div class="modal-body">
 <table class="table table-striped table-hover table-responsive-xs" id="orderItemsTable">
 <caption >
-Items in order
+Items in order <div id="ordernumplaceholder"></div>
 </caption>
 <thead class="thead-dark">
   <tr>
@@ -131,8 +131,8 @@ Items in order
       $('#ordersModal').on('show.bs.modal', function (event) {
         
         var button = $(event.relatedTarget) // Button that triggered the modal
-        alert("{$base_url}index.php/orders/orderItems/"+button.data('order'));
         
+        document.getElementById("ordernumplaceholder").innerHTML=button.data('order');
  
 
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
