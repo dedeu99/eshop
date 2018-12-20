@@ -9,20 +9,30 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
-      <a class="navbar-brand" href="{$base_url}">
-        <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
-      </a> 
-      <ul class="navbar-nav" >
-        <li class="nav-item">
-          <a class="nav-link" href="{$base_url}index.php/index/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{$base_url}index.php/index/register">Register</a>
-        </li>
-      </ul>
-      
-    </nav>
+    <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+
+    <a class="navbar-brand" href="{$base_url}">
+      <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
+    </a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/cart">
+        🛒Shopping Cart
+      </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/register">Register</a>
+      </li>
+    </ul>
+    
+  </nav>
  
     <br>
 

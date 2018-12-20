@@ -9,29 +9,32 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
-      <a class="navbar-brand" href="{$base_url}">
-        <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
+    <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+
+    <a class="navbar-brand" href="{$base_url}">
+      <img src="{$base_url}img/img.jpg" style="width:40px;" alt="Logo">
+    </a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{$base_url}index.php/index/cart">
+        🛒Shopping Cart
       </a>
+      </li>
+    </ul>
 
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{$base_url}index.php/index/cart">🛒Shopping Cart</a>
-        </li>
-      </ul>
-
-      <div class="dropdown" >
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-          {$username}
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="{$base_url}index.php/orders/show">My Orders</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
-        </div>
+    <div class="dropdown " >
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+        {$username}
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="{$base_url}index.php/orders/showOrders">My Orders</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
       </div>
-
-    </nav>  
+    </div> 
+    
+  </nav>  
  
     <br>
 
