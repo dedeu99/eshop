@@ -24,7 +24,7 @@ class Order extends CI_Model {
 		return  $this->db->query("SELECT * FROM orders where customer_id='$customer_id'")->result_array();	
 	}
 
-	public function getOrder_items($customer_id)
+	public function getOrder_items($order_id)
 	{
 		$order_id=htmlentities($order_id);
 		return  $this->db->query("SELECT * FROM orders_items where order_id='$order_id'")->result_array();		
