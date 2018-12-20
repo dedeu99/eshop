@@ -141,29 +141,24 @@ Items in order
 
           var response= JSON.parse(data);
           var total=0;
+          var row;
           for (var elem in response) {  
             console.log(response[elem]);
 
-            var row = table.insertRow(table.rows.length);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-
-            cell1.innerHTML = response[elem]['product_id'];
-            cell2.innerHTML = response[elem]['name'];
-            cell3.innerHTML = response[elem]['price'];
-            cell4.innerHTML = response[elem]['quantity'];
+            row = table.insertRow(table.rows.length);
+            row.insertCell(0).innerHTML = response[elem]['product_id'];
+            row.insertCell(1).innerHTML = response[elem]['name'];
+            row.insertCell(2).innerHTML = response[elem]['price'];
+            row.insertCell(3).innerHTML = response[elem]['quantity'];
             var subtotal=parseInt(response[elem]['price'])*parseInt(response[elem]['quantity']);
-            cell5.innerHTML = subtotal+"€";
+            row.insertCell(4).innerHTML = subtotal+"€";
             total+=subtotal;
           }
-          var row=table.insertRow(table.rows.length);
+          row=table.insertRow(table.rows.length);
           row.insertCell(0);
           row.insertCell(1);
           row.insertCell(2);
-          row.insertCell(3);
+          row.insertCell(3).innerHTML="TOTAL";
           row.insertCell(4).innerHTML=total+"€";
             
 
