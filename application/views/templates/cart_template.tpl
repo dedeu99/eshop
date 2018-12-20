@@ -73,7 +73,7 @@
             <th scope="row">{$item.id}</th>
             <td>{$item.name}</td>
             <td>{$item.price}€</td>
-            <td><input class="form-control" id="input{$item.id}" oninput="updateTotal({$item.id},{$item.price})" type="number" value="{$item.quantity}" min="1"></td>
+            <td><input class="form-control" id="input{$item.id}" oninput="updateSubTotal({$item.id},{$item.price})" type="number" value="{$item.quantity}" min="1"></td>
             <td><span id="total{$item.id}">{$item.subtotal}</span>€</td>
             <td><button class="btn btn-danger" onclick="removeItemFromCart({$item.id},{$item.price})">Remove</button></td>
           </tr>
@@ -83,7 +83,7 @@
             <td> </td>
             <td> </td>
             <td><b>TOTAL</b></td>
-            <td>{$total}€</td>
+            <td id="total">{$total}€</td>
           </tr>
         </tbody>
       </table>
@@ -106,7 +106,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
-      function updateTotal(id,price){
+      function updateSubTotal(id,price){
 
         var input=document.getElementById("input"+id);
         if(input.value<1)
@@ -119,8 +119,11 @@
         $.get("{$base_url}index.php/orders/removeProduct/"+itemId, function(data,status){
         });
         var table=document.getElementById("cartTable");
-        table.deleteRow(document.getElementById("total"+itemId).parentNode.parentNode.rowIndex);
-        updateTotal(itemId,price);
+        var subtotal=document.getElementById("total"+itemId);
+        table.deleteRow(subtotal.parentNode.parentNode.rowIndex);
+        
+        var i=parseInt(document.getElementById("total").textContent);
+        document.getElementById("total").textContent=i-(parseInt(subtotal).textContent);
       }
     </script>
   </body>
