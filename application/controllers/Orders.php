@@ -31,7 +31,7 @@ class Orders extends CI_Controller {
 			}
 		}
 		public function removeProduct($productid=-1){
-			if($quantity<=0)
+			if($productid<=0)
 				return;
 			if(isset($_SESSION['cart'][$productid]))
 				unset($_SESSION['cart'][$productid]);
