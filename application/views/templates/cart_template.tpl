@@ -53,11 +53,13 @@
       <br>
       <table id="cartTable" class="table table-striped table-hover table-responsive-xs">
         <caption >
+        <div class="row">
           <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
           {if !$loggedin||($total<1)}
           disabled
           {/if}
           >Checkout</button></a>
+        </div>
         </caption>
         <thead class="thead-dark">
           <tr>
