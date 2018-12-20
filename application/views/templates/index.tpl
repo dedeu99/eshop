@@ -141,9 +141,9 @@
         $.get("{$base_url}index.php/products/getProductsByCategory/"+this.value, function(data,status){
           
           var response= JSON.parse(data);
-          //alert(response);
+          
           for(var i in response)  
-          //alert(response[i]);  
+          
             $( '#products' ).append( makeProduct(response[i]) );
           });
     });

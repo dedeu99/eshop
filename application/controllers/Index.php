@@ -8,17 +8,12 @@
 		{
 			parent::__construct();
 			
-			
-
 			$this->load->model('product');
 			$this->load->model('customer');
 			//$this->load->model('order');
-
 			//$this->load->helper('url_helper');
 			$this->load->helper('url');
-			$this->load->library('session');
-
-			
+			$this->load->library('session');	
 			//$this->load->helper(array('form', 'url'));
 
             $this->load->library('form_validation');

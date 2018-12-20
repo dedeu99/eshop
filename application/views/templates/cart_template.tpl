@@ -72,8 +72,8 @@
             <th scope="row">{$item.id}</th>
             <td>{$item.name}</td>
             <td>{$item.price}€</td>
-            <td>{$item.quantity}</td>
-            <td>{$item.subtotal}€</td>
+            <td><input class="form-control" id="input{$item.id}" oninput="updateTotal({$item.id},{$item.price})" type="number" value="{$item.quantity}" min="1"></td>
+            <td id="total{$item.id}">{$item.subtotal}€</td>
           </tr>
           {/foreach}
           <tr>
@@ -100,5 +100,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function updateTotal(id,price){
+
+        var input=document.getElementById("input"+id);
+        if(input.value<1)
+          input.value=1;
+        var total=document.getElementById("total"+id);
+        total.textContent=input.value*price;
+      }
+    </script>
   </body>
 </html>
