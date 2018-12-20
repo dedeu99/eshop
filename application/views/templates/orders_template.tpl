@@ -36,6 +36,7 @@
     <br>
 
     <div class="container shadow ">
+      <br>
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
       Orders made by {$username}

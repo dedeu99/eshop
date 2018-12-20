@@ -34,7 +34,7 @@
         {$username}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="{$base_url}index.php/orders/show">My Orders</a>
+        <a class="dropdown-item" href="{$base_url}index.php/orders/showOrders">My Orders</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="{$base_url}index.php/index/logout">Log Out</a>
       </div>

@@ -48,6 +48,7 @@
     <br>
 
     <div class="container shadow ">
+      <br>
       <table class="table table-striped table-hover table-responsive-xs">
         <caption >
           <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
