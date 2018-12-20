@@ -83,7 +83,7 @@
       <div class="modal-body">
 <table class="table table-striped table-hover table-responsive-xs" id="orderItemsTable">
 <caption >
-Items in order <div id="ordernumplaceholder"></div>
+Order <span id="ordernumplaceholder"></span>
 </caption>
 <thead class="thead-dark">
   <tr>
@@ -148,7 +148,7 @@ Items in order <div id="ordernumplaceholder"></div>
             row = table.insertRow(table.rows.length);
             row.insertCell(0).innerHTML = response[elem]['product_id'];
             row.insertCell(1).innerHTML = response[elem]['name'];
-            row.insertCell(2).innerHTML = response[elem]['price'];
+            row.insertCell(2).innerHTML = response[elem]['price']+"€";
             row.insertCell(3).innerHTML = response[elem]['quantity'];
             var subtotal=parseInt(response[elem]['price'])*parseInt(response[elem]['quantity']);
             row.insertCell(4).innerHTML = subtotal+"€";
@@ -167,7 +167,7 @@ Items in order <div id="ordernumplaceholder"></div>
       $('#ordersModal').on('hidden.bs.modal', function (event) {
         var table= document.getElementById("orderItemsTable");
         var i=table.rows.length;
-        while(i>1)
+        while(i>2)
           table.deleteRow(--i);
       });
     </script>
