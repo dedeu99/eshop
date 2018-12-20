@@ -135,7 +135,7 @@ Items in order
 
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
           var modal = $(this);
-          var table= modal.find('.modal-body table').val(recipient);
+          var table= modal.find('.modal-body table');
           console.log(data);
           alert("GET MADE");
           for (var elem in data) {  
