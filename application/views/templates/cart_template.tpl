@@ -119,7 +119,7 @@
         $.get("{$base_url}index.php/orders/removeProduct/"+itemId, function(data,status){
         });
         var table=document.getElementById("cartTable");
-        table.deleteRow(document.getElementById("total"+itemId).rowIndex);
+        table.deleteRow(document.getElementById("input"+itemId).rowIndex);
 
       }
     </script>
