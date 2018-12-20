@@ -48,11 +48,15 @@ class Orders extends CI_Controller {
 			$data['username'] = $this->session->user;
 			$data['base_url'] = base_url();
 			$data['orders'] = $arr=$this->order->getOrders($_SESSION['userId']);
-		
+			
 		
 			
 
 			$this->smarty->view('application/views/templates/orders_template.tpl', $data);
 		}
+		public function orderItems($order_id){
+			echo json_encode($this->order->getOrder_items($order_id));
+		}
+
 	}
 ?>

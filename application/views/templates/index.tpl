@@ -57,7 +57,7 @@
 
       <div class="flex-column">
         <div class="sticky-top flex-row">
-          <div class="ml-1 mt-1 row">
+          <div class="ml-0 mt-1 row">
             <nav class="navbar navbar-dark bg-dark" >
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                 <span class="navbar-toggler-icon"></span>
