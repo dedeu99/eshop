@@ -93,6 +93,7 @@
             <td> </td>
             <td><b>TOTAL</b></td>
             <td><span id="total">{$total}</span>€</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
