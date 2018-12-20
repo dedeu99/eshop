@@ -139,8 +139,9 @@ Items in order
           var response= JSON.parse(data);
           
           for (var elem in response) {  
-            alert("IM WORKING");
             console.log(elem+" = "+response[elem]);
+            console.log(response[elem]);
+
     /*        var row = table.insertRow(0);
 
             // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
