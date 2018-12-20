@@ -81,27 +81,29 @@
 
     <script>
       $('#ordersModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
+        var button = $(event.relatedTarget) // Button that triggered the modal
 
 
-  $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
-      var table= modal.find('.modal-body table').val(recipient);
-      for (var elem in data) {  
-        console.log(elem+" = "+data[elem]);
-/*        var row = table.insertRow(0);
+        $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
+          var modal = $(this)
+          var table= modal.find('.modal-body table').val(recipient);
+          console.log(data);
+          for (var elem in data) {  
+            console.log(elem+" = "+data[elem]);
+    /*        var row = table.insertRow(0);
 
-        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
+            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
 
-        // Add some text to the new cells:
-        cell1.innerHTML = "NEW CELL1";
-        cell2.innerHTML = "NEW CELL2";    */
-      }
-      
+            // Add some text to the new cells:
+            cell1.innerHTML = "NEW CELL1";
+            cell2.innerHTML = "NEW CELL2";    */
+          }
+            
 
-      });  
-})
+        });  
+      })
     </script>
   </body>
 
