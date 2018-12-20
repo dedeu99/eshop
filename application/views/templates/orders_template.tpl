@@ -168,7 +168,7 @@ Items in order
         var table= document.getElementById("orderItemsTable");
         var i=table.rows.length;
         while(i>0)
-          table.deleteRow(i--);
+          table.deleteRow(--i);
       });
     </script>
   </body>
