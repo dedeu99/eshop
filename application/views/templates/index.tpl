@@ -53,10 +53,19 @@
   </nav>
 
   <div >
-    <div class="d-flex flex-row">
+    <div class="d-flex">
 
       <div class="flex-column">
         <div class="sticky-top flex-row">
+          <div class="ml-1 mt-1 row">
+            <nav class="navbar navbar-dark bg-dark" >
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+          </div>
+
+
           <div class="navbar navbar-dark bg-dark collapse text-white" id="navbarToggleExternalContent">
             <fieldset >
             <legend><h4>Categorias:</h4></legend>
@@ -71,14 +80,8 @@
           </div>
         </div>
       </div>
-      <div class="flex-column">
-        <div class="sticky-top ml-3 mt-1 row">
-          <nav class="navbar navbar-dark bg-dark" >
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
-        </div>
+      <div class="container-flex" style="width:100%">
+        
         <div class="d-flex flex-wrap" id="products">
         </div>
         
