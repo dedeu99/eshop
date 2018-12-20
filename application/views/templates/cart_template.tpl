@@ -83,7 +83,7 @@
             <td> </td>
             <td> </td>
             <td><b>TOTAL</b></td>
-            <td id="total">{$total}€</td>
+            <td><span id="total">{$total}</span>€</td>
           </tr>
         </tbody>
       </table>
