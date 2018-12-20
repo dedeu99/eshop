@@ -114,17 +114,23 @@
 
         var subtotal=document.getElementById("total"+id);
         var st=parseInt(subtotal.textContent);
-        alert(st);
+        
         var total=document.getElementById("total");
         var t=parseInt(total.textContent);
-        alert(t);
+        
         subtotal.textContent=input.value*price;
         t-=st;
-        alert(t);
+        
         t+=input.value*price;
-        alert(t);
+        
         total.textContent=t;
+         $.get("{$base_url}index.php/orders/removeProduct/"+id, function(data,status){
 
+          $.get("{$base_url}index.php/orders/orderProduct/"+id+"/"+input.value, function(data,status){
+          
+          
+            });
+        });
 
       }
 
