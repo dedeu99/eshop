@@ -169,7 +169,7 @@ Items in order
         var i=table.rows.length;
         while(i>0)
           tabela.deleteRow(i--);
-      }
+      });
     </script>
   </body>
 
