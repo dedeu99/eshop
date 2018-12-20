@@ -127,10 +127,10 @@ Items in order
 
     <script>
       $('#ordersModal').on('show.bs.modal', function (event) {
-        alert("ITS WORKING?");
+        
         var button = $(event.relatedTarget) // Button that triggered the modal
-
-
+        alert("{$base_url}index.php/orders/orderItems/"+button.data('order'));
+        
  
 
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
