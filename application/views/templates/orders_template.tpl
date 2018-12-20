@@ -57,7 +57,7 @@
             <td>{$order.created_at}</td>
             <td>{$order.status}€</td>
             <td>{$order.total}</td>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-order="{$order.id}">Show more</button>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-order="{$order.id}">Show more</button></td>
 
            </tr>
           {/foreach}
