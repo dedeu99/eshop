@@ -167,7 +167,7 @@ Items in order <div id="ordernumplaceholder"></div>
       $('#ordersModal').on('hidden.bs.modal', function (event) {
         var table= document.getElementById("orderItemsTable");
         var i=table.rows.length;
-        while(i>0)
+        while(i>1)
           table.deleteRow(--i);
       });
     </script>
