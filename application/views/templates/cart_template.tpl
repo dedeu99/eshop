@@ -49,7 +49,7 @@
 
     <div class="container shadow ">
       <br>
-      <table class="table table-striped table-hover table-responsive-xs">
+      <table id="cartTable" class="table table-striped table-hover table-responsive-xs">
         <caption >
           <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
           {if !$loggedin||($total<1)}
@@ -118,6 +118,9 @@
       function removeItemFromCart(itemId){
         $.get("{$base_url}index.php/orders/removeProduct/"+itemId, function(data,status){
         });
+        var table=document.getElementById("cartTable");
+        table.removeRow(document.getElementById("total"+id).rowIndex);
+
       }
     </script>
   </body>
