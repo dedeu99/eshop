@@ -114,7 +114,7 @@
 
       function removeItemFromCart(itemId){
         $.get("{$base_url}index.php/orders/removeProduct/"+itemId, function(data,status){
-        }
+        });
       }
     </script>
   </body>
