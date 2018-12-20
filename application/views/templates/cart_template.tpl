@@ -123,6 +123,8 @@
         table.deleteRow(subtotal.parentNode.parentNode.rowIndex);
         
         var i=parseInt(document.getElementById("total").textContent);
+        alert(i);
+        alert(parseInt(subtotal).textContent);
         document.getElementById("total").textContent=i-(parseInt(subtotal).textContent);
       }
     </script>
