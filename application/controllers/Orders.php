@@ -30,6 +30,12 @@ class Orders extends CI_Controller {
 				$_SESSION['cart'][$productid]= $quantity;
 			}
 		}
+		public function removeProduct($productid=-1){
+			if($quantity<=0)
+				return;
+			if(isset($_SESSION['cart'][$productid]))
+				unset($_SESSION['cart'][$productid]);
+		}
 		public function placeOrder(){
 			
 			if(!$this->isloggedin())
