@@ -158,7 +158,7 @@ Items in order
           row.insertCell(0);
           row.insertCell(1);
           row.insertCell(2);
-          row.insertCell(3).innerHTML="TOTAL";
+          row.insertCell(3).innerHTML="<b>TOTAL</b>";
           row.insertCell(4).innerHTML=total+"€";
             
 
