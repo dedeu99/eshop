@@ -111,8 +111,18 @@
         var input=document.getElementById("input"+id);
         if(input.value<1)
           input.value=1;
-        var total=document.getElementById("total"+id);
-        total.textContent=input.value*price;
+
+        var subtotal=document.getElementById("total"+id);
+        var st=parseInt(subtotal.textContent);
+
+        var total=document.getElementById("total");
+        var t=parseInt(subtotal.textContent);
+
+        subtotal.textContent=input.value*price;
+        t-=subtotal;
+        t+=input.value*price;
+        total.textContent=t;
+
       }
 
       function removeItemFromCart(itemId,price){
@@ -123,8 +133,7 @@
         table.deleteRow(subtotal.parentNode.parentNode.rowIndex);
         
         var i=parseInt(document.getElementById("total").textContent);
-        alert(i);
-        alert(parseInt(subtotal.textContent));
+        
         document.getElementById("total").textContent=i-parseInt(subtotal.textContent);
       }
     </script>
