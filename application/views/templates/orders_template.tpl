@@ -87,7 +87,7 @@
   $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
       var table= modal.find('.modal-body table').val(recipient);
       for (var elem in data) {  
-        console.log("${elem} = ${data[elem]}");
+        console.log(elem+" = "+data[elem]);
 /*        var row = table.insertRow(0);
 
         // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
