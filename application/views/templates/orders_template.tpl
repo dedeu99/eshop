@@ -160,6 +160,10 @@ Items in order
             total+=subtotal;
           }
           var row=table.insertRow(table.rows.length);
+          row.insertCell(0);
+          row.insertCell(1);
+          row.insertCell(2);
+          row.insertCell(3);
           row.insertCell(4).innerHTML=total+"€";
             
 
