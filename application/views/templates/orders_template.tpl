@@ -159,7 +159,8 @@ Items in order
             cell5.innerHTML = subtotal+"€";
             total+=subtotal;
           }
-          (table.insertRow(table.rows.length)).insertCell(4).innerHTML=total+"€";
+          var row=table.insertRow(table.rows.length);
+          row.insertCell(4).innerHTML=total+"€";
             
 
         });  
