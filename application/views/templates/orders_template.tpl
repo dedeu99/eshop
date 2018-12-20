@@ -151,11 +151,11 @@ Items in order
             var cell4 = row.insertCell(3);
             var cell5 = row.insertCell(4);
 
-            cell1.innerHTML = response['product_id'];
-            cell2.innerHTML = response['name'];
-            cell3.innerHTML = response['price'];
-            cell4.innerHTML = response['quantity'];
-            cell5.innerHTML = response['price']*response['quantity'];
+            cell1.innerHTML = response[elem]['product_id'];
+            cell2.innerHTML = response[elem]['name'];
+            cell3.innerHTML = response[elem]['price'];
+            cell4.innerHTML = response[elem]['quantity'];
+            cell5.innerHTML = response[elem]['price']*response['quantity'];
 
           }
             
