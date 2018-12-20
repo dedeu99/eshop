@@ -7,6 +7,7 @@ class Orders extends CI_Controller {
 			parent::__construct();
 			$this->load->model('order');
 			$this->load->library('session');
+			$this->load->helper('url');
 
 			
 		}
