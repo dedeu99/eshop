@@ -20,10 +20,8 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link text-white" href="{$base_url}index.php/index/cart">
-        <small>{$total}€ in {$nitems} items</small>
-        <br>
-        <small>🛒Shopping Cart</small>
-
+        <small>Shopping Cart</small>
+        <small>{$total}€ ({$nitems} items)🛒</small>
       </a>
       </li>
     </ul>
