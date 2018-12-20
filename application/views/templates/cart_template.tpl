@@ -156,7 +156,7 @@
         document.getElementById("total").textContent=i-parseInt(subtotal.textContent);
 
 
-        if(table.rows.length<2){
+        if(table.rows.length<3){
           document.getElementById("checkoutButton").disabled = true;
         }
 
