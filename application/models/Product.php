@@ -24,9 +24,10 @@ class Product extends CI_Model {
 	}
 	public function getProductsInfo($products)
 	{
-
+		$arr=array_keys($products);
+		if(count($arr)<0) return [];
 		$query= "SELECT * FROM products WHERE id IN (";
-		$query.=implode(",",  array_keys($products));
+		$query.=implode(",", $arr );
 		$query.=")";
 		
 		return $this->db->query($query)->result_array();
