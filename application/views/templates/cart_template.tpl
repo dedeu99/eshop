@@ -53,7 +53,7 @@
       <br>
       <table id="cartTable" class="table table-striped table-hover table-responsive-xs">
         <caption >
-        <div class="row justify-content-around">
+        <div class="row justify-content-between">
           <a href="{$base_url}">
             <button type="button" class="btn" >
               &lt; Retroceder
