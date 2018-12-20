@@ -39,9 +39,9 @@ class Orders extends CI_Controller {
 			$this->showOrders();
 		}
 		public function showOrders(){
-			$id=$_SESSION['userId'];
-			$arr=$this->order->getOrder_items($id);
-			print_r($arr);
+			
+			
+			print_r($arr=$this->order->getOrder_items($_SESSION['userId']));
 		}
 	}
 ?>
