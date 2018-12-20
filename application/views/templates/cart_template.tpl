@@ -75,7 +75,7 @@
             <td>{$item.price}€</td>
             <td><input class="form-control" id="input{$item.id}" oninput="updateTotal({$item.id},{$item.price})" type="number" value="{$item.quantity}" min="1"></td>
             <td><span id="total{$item.id}">{$item.subtotal}</span>€</td>
-            <td><button class="btn btn-danger" onclick="removeItemFromCart({$item.id})">Remove</button></td>
+            <td><button class="btn btn-danger" onclick="removeItemFromCart({$item.id},{$item.price})">Remove</button></td>
           </tr>
           {/foreach}
           <tr>
@@ -115,12 +115,12 @@
         total.textContent=input.value*price;
       }
 
-      function removeItemFromCart(itemId){
+      function removeItemFromCart(itemId,price){
         $.get("{$base_url}index.php/orders/removeProduct/"+itemId, function(data,status){
         });
         var table=document.getElementById("cartTable");
         table.deleteRow(document.getElementById("total"+itemId).parentNode.parentNode.rowIndex);
-
+        updateTotal(itemId,price);
       }
     </script>
   </body>
