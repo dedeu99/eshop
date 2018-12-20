@@ -121,7 +121,7 @@
         <div class="modal-body">
 <table class="table table-striped table-hover table-responsive-xs">
   <caption >
-Orders made by {$username}
+Items in order
   </caption>
   <thead class="thead-dark">
     <tr>
@@ -133,16 +133,6 @@ Orders made by {$username}
     </tr>
   </thead>
   <tbody>
-    {foreach $orders as $order}
-    <tr>
-      <th scope="row">{$order.id}</th>
-      <td>{$order.created_at}</td>
-      <td>{$order.status}€</td>
-      <td>{$order.total}</td>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-order="{$order.id}">Show more</button>
-
-     </tr>
-    {/foreach}
   </tbody>
 </table>
         </div>
