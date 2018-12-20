@@ -136,19 +136,15 @@ Items in order
  
 
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
-          var modal = $(this);
+//          var modal = $(this);
           var table= document.getElementById("orderItemsTable");
 
-
-
-
-             modal.find('.modal-body > table');
           var response= JSON.parse(data);
           
           for (var elem in response) {  
             console.log(response[elem]);
 
-            var row = table.insertRow(0);
+            var row = table.insertRow(table.rows.length);
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
             var cell3 = row.insertCell(2);
