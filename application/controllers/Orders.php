@@ -36,8 +36,8 @@ class Orders extends CI_Controller {
 				redirect('/');
 			
 			$this->order->createOrder($_SESSION['userId'],$_SESSION['total'],$_SESSION['cart']);
-			//unset($_SESSION['cart']);
-			//$_SESSION['total']=0;
+			unset($_SESSION['cart']);
+			$_SESSION['total']=0;
 			redirect('orders/showOrders');
 		}
 		public function showOrders(){
