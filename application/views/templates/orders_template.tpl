@@ -87,11 +87,13 @@ Items in order
 </caption>
 <thead class="thead-dark">
   <tr>
-    <th scope="col">#</th>
-    <th scope="col">Created at</th>
-    <th scope="col">Status</th>
-    <th scope="col">Total</th>
-    <th scope="col">Details</th>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price per unit</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Subtotal</th>
+    </tr>
   </tr>
 </thead>
 <tbody>

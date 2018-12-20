@@ -28,7 +28,7 @@ class Order extends CI_Model {
 		$order_id=htmlentities($order_id);
 
 
-		return  $this->db->query("SELECT * FROM order_items join products on product_id=products.id where order_id='$order_id' ")->result_array();		
+		return  $this->db->query("SELECT product_id, name, price, quantity FROM order_items join products on product_id=products.id where order_id='$order_id' ")->result_array();		
 	}
 }
 ?>
