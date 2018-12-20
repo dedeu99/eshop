@@ -140,7 +140,7 @@ Items in order
           var table= document.getElementById("orderItemsTable");
 
           var response= JSON.parse(data);
-          
+          var total=0;
           for (var elem in response) {  
             console.log(response[elem]);
 
@@ -155,9 +155,11 @@ Items in order
             cell2.innerHTML = response[elem]['name'];
             cell3.innerHTML = response[elem]['price'];
             cell4.innerHTML = response[elem]['quantity'];
-            cell5.innerHTML = parseInt(response[elem]['price'])*parseInt(response[elem]['quantity']);
-
+            var subtotal=parseInt(response[elem]['price'])*parseInt(response[elem]['quantity']);
+            cell5.innerHTML = subtotal+"€";
+            total+=subtotal;
           }
+          table.insertRow(table.rows.length).insertCell(4).innerHTML=total+"€";
             
 
         });  
