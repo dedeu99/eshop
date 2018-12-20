@@ -164,9 +164,14 @@ Items in order
 
         });  
       });
+      $('#ordersModal').on('hidden.bs.modal', function (event) {
+        var table= document.getElementById("orderItemsTable");
+        var i=table.rows.length;
+        while(i>0)
+          tabela.deleteRow(i--);
+      }
     </script>
   </body>
-
 
 
 
