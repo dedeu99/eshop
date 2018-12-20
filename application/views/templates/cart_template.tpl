@@ -114,14 +114,17 @@
 
         var subtotal=document.getElementById("total"+id);
         var st=parseInt(subtotal.textContent);
-
+        alert(st);
         var total=document.getElementById("total");
-        var t=parseInt(subtotal.textContent);
-
+        var t=parseInt(total.textContent);
+        alert(t);
         subtotal.textContent=input.value*price;
         t-=subtotal;
+        alert(t);
         t+=input.value*price;
+        alert(t);
         total.textContent=t;
+        
 
       }
 
