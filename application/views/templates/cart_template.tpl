@@ -59,7 +59,7 @@
               &lt; Retroceder
             </button>
           </a>
-          <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
+          <a href="{$base_url}index.php/orders/placeOrder"><button type="button" id="checkoutButton" class="btn btn-primary" 
           {if !$loggedin||($total<1)}
           disabled
           {/if}
@@ -154,6 +154,12 @@
         var i=parseInt(document.getElementById("total").textContent);
         
         document.getElementById("total").textContent=i-parseInt(subtotal.textContent);
+
+
+        if(table.rows.length<2){
+          document.getElementById("checkoutButton").disabled = true;
+        }
+
       }
     </script>
   </body>
