@@ -119,12 +119,12 @@
         var t=parseInt(total.textContent);
         alert(t);
         subtotal.textContent=input.value*price;
-        t-=subtotal;
+        t-=st;
         alert(t);
         t+=input.value*price;
         alert(t);
         total.textContent=t;
-        
+
 
       }
 
