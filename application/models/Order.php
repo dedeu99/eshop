@@ -11,7 +11,7 @@ class Order extends CI_Model {
 		//$this->db->insert_id();
 		$this->db->query("INSERT INTO orders (customer_id,created_at,status,total) VALUES('$customer_id',NOW(),1,'$total')");
 		$orderId=$this->db->insert_id();
-		var_dump($orderId);
+		var_dump($products);
 		foreach ($products as $product ) {
 			$pid=$product['id'];
 			$pqnt=$product['quantity'];
