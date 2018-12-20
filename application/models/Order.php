@@ -4,7 +4,7 @@ class Order extends CI_Model {
 	{
 		$this->load->database();
 	}
-	public function createOrder($customer_id,$total,$produts)
+	public function createOrder($customer_id,$total,$products)
 	{
 		$customer_id=htmlentities($customer_id);
 		$total=htmlentities($total);
