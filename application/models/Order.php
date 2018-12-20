@@ -11,7 +11,6 @@ class Order extends CI_Model {
 		//$this->db->insert_id();
 		$this->db->query("INSERT INTO orders (customer_id,created_at,status,total) VALUES('$customer_id',NOW(),1,'$total')");
 		$orderId=$this->db->insert_id();
-		var_dump($products);
 
 		foreach ($products as $pid => $pqnt  ) {
 			$this->db->query("INSERT INTO order_items (order_id,product_id,quantity) VALUES('$orderId','$pid','$pqnt')");
@@ -27,6 +26,9 @@ class Order extends CI_Model {
 	public function getOrder_items($order_id)
 	{
 		$order_id=htmlentities($order_id);
+		$data['base_url'] = base_url();
+		$data['username'] = $this->session->user;
+
 		return  $this->db->query("SELECT * FROM order_items where order_id='$order_id'")->result_array();		
 	}
 }

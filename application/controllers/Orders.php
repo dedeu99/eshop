@@ -10,11 +10,10 @@ class Orders extends CI_Controller {
 
 			
 		}
-		public function index()
-		{
-			$this->load->view('welcome_message');
-		}
 
+		public function isloggedin(){
+			return isset($this->session->userId)&&isset($this->session->user);
+		}
 		public function orderProduct($productid=-1,$quantity=-1)
 		{
 
@@ -32,6 +31,11 @@ class Orders extends CI_Controller {
 		}
 		public function placeOrder(){
 			
+			if(!$this->isloggedin())
+				redirect('/');
+			
+			
+			
 
 			$this->order->createOrder($_SESSION['userId'],$_SESSION['total'],$_SESSION['cart']);
 			//unset($_SESSION['cart']);
@@ -39,9 +43,18 @@ class Orders extends CI_Controller {
 			$this->showOrders();
 		}
 		public function showOrders(){
+			if(!$this->isloggedin())
+				redirect('/');
 			
+
+			$data['username'] = $this->session->user;
+			$data['base_url'] = base_url();
+			$data['orders'] = $arr=$this->order->getOrders($_SESSION['userId']);
+		
+		
 			
-			print_r($arr=$this->order->getOrders($_SESSION['userId']));
+
+			$this->smarty->view('application/views/templates/orders_template.tpl', $data);
 		}
 	}
 ?>
