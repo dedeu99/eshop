@@ -81,7 +81,7 @@
         </button>
       </div>
       <div class="modal-body">
-<table class="table table-striped table-hover table-responsive-xs">
+<table class="table table-striped table-hover table-responsive-xs" id="orderItemsTable">
 <caption >
 Items in order
 </caption>
@@ -137,7 +137,12 @@ Items in order
 
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
           var modal = $(this);
-          var table= modal.find('.modal-body>table');
+          var table= document.getElementById("orderItemsTable");
+
+
+
+
+             modal.find('.modal-body > table');
           var response= JSON.parse(data);
           
           for (var elem in response) {  
