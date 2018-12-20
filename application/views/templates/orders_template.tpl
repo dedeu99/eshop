@@ -128,6 +128,8 @@ Items in order
         var button = $(event.relatedTarget) // Button that triggered the modal
 
 
+ 
+
         $.get("{$base_url}index.php/orders/orderItems/"+button.data('order'), function(data,status){
           var modal = $(this)
           var table= modal.find('.modal-body table').val(recipient);
@@ -149,7 +151,7 @@ Items in order
             
 
         });  
-      })
+      });
     </script>
   </body>
 
