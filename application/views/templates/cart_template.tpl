@@ -52,6 +52,20 @@
     <div class="container shadow ">
       <br>
       <table id="cartTable" class="table table-striped table-hover table-responsive-xs">
+        <caption >
+        <div class="row justify-content-around">
+          <a href="{$base_url}">
+            <button type="button" class="btn" >
+              &lt; Retroceder
+            </button>
+          </a>
+          <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
+          {if !$loggedin||($total<1)}
+          disabled
+          {/if}
+          >Checkout</button></a>
+        </div>
+        </caption>
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
@@ -82,18 +96,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="row ustify-content-around">
-          <a href="{$base_url}">
-            <button type="button" class="btn" >
-              &lt; Retroceder
-            </button>
-          </a>
-          <a href="{$base_url}index.php/orders/placeOrder"><button type="button"  class="btn btn-primary" 
-          {if !$loggedin||($total<1)}
-          disabled
-          {/if}
-          >Checkout</button></a>
-        </div>
+      
       
 
     </div>
