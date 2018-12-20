@@ -73,7 +73,7 @@
             <td>{$item.name}</td>
             <td>{$item.price}€</td>
             <td><input class="form-control" id="input{$item.id}" oninput="updateTotal({$item.id},{$item.price})" type="number" value="{$item.quantity}" min="1"></td>
-            <td id="total{$item.id}">{$item.subtotal}€</td>
+            <td><span id="total{$item.id}">{$item.subtotal}</span>€</td>
           </tr>
           {/foreach}
           <tr>
